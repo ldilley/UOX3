@@ -20,7 +20,7 @@
 #include "StringUtility.hpp"
 #include "osunique.hpp"
 
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 #include <sys/ioctl.h>
 #endif
 
@@ -484,7 +484,7 @@ void CNetworkStuff::sockInit( void )
 	cwmWorldState->SetKeepRun( true );
 	cwmWorldState->SetError( false );
 
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 	SI32 on = 1;
 #endif
 
@@ -492,7 +492,7 @@ void CNetworkStuff::sockInit( void )
 	if( a_socket < 0 )
 	{
 		Console.Error( " Unable to create socket");
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 		Console.Error( oldstrutil::format( " Code %i", WSAGetLastError() ));
 #else
 		Console << myendl;
@@ -502,7 +502,7 @@ void CNetworkStuff::sockInit( void )
 		Shutdown( FATAL_UOX3_ALLOC_NETWORK );
 		return;
 	}
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 	[[maybe_unused]] int result = setsockopt( a_socket, SOL_SOCKET, SO_REUSEADDR, &on, sizeof( on ));
 #endif
 
@@ -544,7 +544,7 @@ void CNetworkStuff::SockClose( void )
 	});
 }
 
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 #ifdef FD_SETSIZE
 #if FD_SETSIZE < 256
 #undef FD_SETSIZE
@@ -570,7 +570,7 @@ void CNetworkStuff::CheckConn( void )
 	{
 		SI32 len = sizeof( struct sockaddr_in );
 		SI32 newClient;
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 		newClient = accept( a_socket, ( struct sockaddr * )&client_addr, &len );
 #else
 		newClient = accept( a_socket, ( struct sockaddr * )&client_addr, ( socklen_t * )&len );
@@ -587,7 +587,7 @@ void CNetworkStuff::CheckConn( void )
 
 		if( newClient < 0 )
 		{
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 			SI32 errorCode = WSAGetLastError();
 			if( errorCode == WSAEWOULDBLOCK )
 #else
@@ -687,7 +687,7 @@ CNetworkStuff::~CNetworkStuff()
 	loggedInClients.resize( 0 );
 	connClients.resize( 0 );
 	closesocket( static_cast<UOXSOCKET>( s ));
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	WSACleanup();
 #endif
 }
@@ -730,7 +730,7 @@ void CNetworkStuff::CheckMessage( void )
 				}
 				catch( socket_error& blah )
 				{
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 					Console << "Client disconnected" << myendl;
 #else
 					if( blah.ErrorNumber() == WSAECONNRESET )
@@ -1244,7 +1244,7 @@ void CNetworkStuff::CheckLoginMessage( void )
 				}
 				catch( socket_error& blah )
 				{
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 					messageLoop << "Client disconnected";
 #else
 					if( blah.ErrorNumber() == WSAECONNRESET )
@@ -1263,7 +1263,7 @@ void CNetworkStuff::CheckLoginMessage( void )
 	}
 	else if( s == -1 )
 	{
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 		SI32 errorCode = WSAGetLastError();
 		if( errorCode != 10022 )
 		{

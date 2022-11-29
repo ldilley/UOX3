@@ -34,7 +34,7 @@
 #include <cctype>
 #include <stdexcept>
 
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 #include <termios.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
@@ -234,7 +234,7 @@ auto CConsole::DoClearScreen() -> void
 auto CConsole::operator << ( const char *output ) ->CConsole&
 {
 	StartOfLineCheck();
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	CONSOLE_SCREEN_BUFFER_INFO ScrBuffInfo;
 	auto hco = GetStdHandle( STD_OUTPUT_HANDLE );
 	GetConsoleScreenBufferInfo( hco, &ScrBuffInfo );
@@ -541,7 +541,7 @@ auto CConsole::Start(const std::string& temp) -> void
 //o------------------------------------------------------------------------------------------------o
 auto CConsole::TurnYellow() -> void
 {
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	auto hco = GetStdHandle( STD_OUTPUT_HANDLE );
 	SetConsoleTextAttribute( hco, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_INTENSITY );
 #else
@@ -557,7 +557,7 @@ auto CConsole::TurnYellow() -> void
 //o------------------------------------------------------------------------------------------------o
 auto CConsole::TurnRed() -> void
 {
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	auto hco = GetStdHandle( STD_OUTPUT_HANDLE );
 	SetConsoleTextAttribute( hco, FOREGROUND_RED | FOREGROUND_INTENSITY );
 #else
@@ -573,7 +573,7 @@ auto CConsole::TurnRed() -> void
 //o------------------------------------------------------------------------------------------------o
 auto CConsole::TurnGreen() -> void
 {
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	auto hco = GetStdHandle( STD_OUTPUT_HANDLE );
 	SetConsoleTextAttribute( hco, FOREGROUND_GREEN | FOREGROUND_INTENSITY );
 #else
@@ -589,7 +589,7 @@ auto CConsole::TurnGreen() -> void
 //o------------------------------------------------------------------------------------------------o
 auto CConsole::TurnBlue() -> void
 {
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	auto hco = GetStdHandle( STD_OUTPUT_HANDLE );
 	SetConsoleTextAttribute( hco, FOREGROUND_BLUE | FOREGROUND_INTENSITY );
 #else
@@ -605,7 +605,7 @@ auto CConsole::TurnBlue() -> void
 //o------------------------------------------------------------------------------------------------o
 auto CConsole::TurnNormal() -> void
 {
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	auto hco = GetStdHandle( STD_OUTPUT_HANDLE );
 	SetConsoleTextAttribute( hco, FOREGROUND_BLUE  | FOREGROUND_RED | FOREGROUND_GREEN );
 #else
@@ -621,7 +621,7 @@ auto CConsole::TurnNormal() -> void
 //o------------------------------------------------------------------------------------------------o
 auto CConsole::TurnBrightWhite() -> void
 {
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	auto hco = GetStdHandle( STD_OUTPUT_HANDLE );
 	SetConsoleTextAttribute( hco, FOREGROUND_BLUE  | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY );
 #else
@@ -746,7 +746,7 @@ auto CConsole::PrintStartOfLine() -> void
 //o------------------------------------------------------------------------------------------------o
 //|	Purpose		-	Set console cursor position
 //o------------------------------------------------------------------------------------------------o
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 auto CConsole::MoveTo( SI32 x, SI32 y ) -> void
 {
 	auto hco = GetStdHandle( STD_OUTPUT_HANDLE );
@@ -859,7 +859,7 @@ auto CConsole::PrintSpecial( UI08 colour, const std::string& msg ) -> void
 //o------------------------------------------------------------------------------------------------o
 auto CConsole::cl_getch() -> std::int32_t
 {
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 	char data = 0;
 	auto a = ::read( 0, &data, 1); // This doesn't block on getting a line due to initalization
 	if( a > 0 )

@@ -5,7 +5,7 @@
 
 // Initial platform/compiler-related stuff to set.
 
-#define WINDOWS		1
+#define UWINDOWS		1
 #define LINUX 		2
 #define MACOS		3
 
@@ -41,9 +41,9 @@
 #endif   //_WIN64
 
 #endif   //_WIN32
-
+#if !defined(WINDOWS)
 #define PLATFORM WINDOWS
-
+#endif
 #else       // A unix type system
 
 #define XP_UNIX            // JS API Requires we define OS we compile with

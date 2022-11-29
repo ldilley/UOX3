@@ -13,7 +13,7 @@
 #include "StringUtility.hpp"
 #include "typedefs.h"
 
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 #include <sys/ioctl.h>
 #endif
 
@@ -976,7 +976,7 @@ void CSocket::Send( const void *point, SI32 length )
 	outlength += length;
 }
 
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 SI32 GrabLastError( void )
 {
 	return errno;
@@ -1057,7 +1057,7 @@ SI32 CSocket::Receive( SI32 x, bool doLog )
 		else if( count == -1 )
 		{
 			SI32 lastError = GrabLastError();
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 			if( lastError != EWOULDBLOCK )
 #else
 				if( lastError != WSAEWOULDBLOCK )

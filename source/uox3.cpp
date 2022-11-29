@@ -78,7 +78,7 @@
 #include "EventTimer.hpp"
 #include <atomic>
 
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 #include <process.h>
 #include <conio.h>
 #endif
@@ -163,7 +163,7 @@ void		CheckAI( CChar& mChar );
 //o------------------------------------------------------------------------------------------------o
 // Internal Pre-Declares
 //o------------------------------------------------------------------------------------------------o
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 BOOL WINAPI exit_handler( DWORD dwCtrlType );
 #else
 void app_stopped(int sig);
@@ -320,7 +320,7 @@ auto main( SI32 argc, char *argv[] ) ->int
 	Network->SockClose();
 	Console.PrintDone();
 	
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	SetConsoleCtrlHandler( exit_handler, true );
 #endif
 	if( cwmWorldState->GetWorldSaveProgress() != SS_SAVING )
@@ -333,7 +333,7 @@ auto main( SI32 argc, char *argv[] ) ->int
 		isWorldSaving = false;
 	}
 	cwmWorldState->ServerData()->SaveIni();
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	SetConsoleCtrlHandler( exit_handler, false );
 #endif
 	
@@ -352,7 +352,7 @@ auto main( SI32 argc, char *argv[] ) ->int
 auto InitOperatingSystem() -> std::optional<std::string>
 {
 	// Startup Winsock2(windows) or signal handers (unix)
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 	WSADATA wsaData;
 	WORD wVersionRequested = MAKEWORD( 2, 2 );
 	SI32 err = WSAStartup( wVersionRequested, &wsaData );
@@ -555,7 +555,7 @@ auto StartInitialize( CServerData &serverdata ) -> void
 //o------------------------------------------------------------------------------------------------o
 // Signal and exit handers
 //o------------------------------------------------------------------------------------------------o
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 //o------------------------------------------------------------------------------------------------o
 //|	Function	-	exit_handler()
 //|					app_stopped()
@@ -2271,13 +2271,13 @@ auto CWorldMain::CheckAutoTimers() -> void
 
 			SetAutoSaved( false );
 
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 			SetConsoleCtrlHandler( exit_handler, TRUE );
 #endif
 			isWorldSaving = true;
 			SaveNewWorld( false );
 			isWorldSaving = false;
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 			SetConsoleCtrlHandler( exit_handler, false );
 #endif
 		}
@@ -2711,7 +2711,7 @@ auto Shutdown( SI32 retCode ) -> void
 	if( retCode && saveOnShutdown )
 	{
 		//they want us to save, there has been an error, we have loaded the world, and WorldState is a valid pointer.
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 		SetConsoleCtrlHandler( exit_handler, true );
 #endif
 		isWorldSaving = true;
@@ -2720,7 +2720,7 @@ auto Shutdown( SI32 retCode ) -> void
 			cwmWorldState->SaveNewWorld( true );
 		} while( cwmWorldState->GetWorldSaveProgress() == SS_SAVING );
 		isWorldSaving = false;
-#if PLATFORM == WINDOWS
+#if defined(_WIN32)
 		SetConsoleCtrlHandler( exit_handler, false );
 #endif
 	}
@@ -2769,7 +2769,7 @@ auto Shutdown( SI32 retCode ) -> void
 		Console.TurnRed();
 		Console << "Exiting UOX with errorlevel " << retCode << myendl;
 		Console.TurnNormal();
-#if PLATFORM == WINDOWS
+#if defined(WIN32)
 		Console << "Press Return to exit " << myendl;
 		std::string throwAway;
 		std::getline( std::cin, throwAway );

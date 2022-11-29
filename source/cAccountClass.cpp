@@ -15,7 +15,7 @@
 #include <filesystem>
 #include "StringUtility.hpp"
 #include "osunique.hpp"
-#if PLATFORM != WINDOWS
+#if !defined(_WIN32)
 #include <arpa/inet.h>
 #endif
 

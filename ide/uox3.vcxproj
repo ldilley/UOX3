@@ -172,9 +172,6 @@
     <ClInclude Include="..\source\worldmain.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\asset\appicon.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="..\asset\uox3.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +181,9 @@
     <ProjectReference Include="..\jsengine\ide\jsengine.vcxproj">
       <Project>{59fffeb5-b427-4e86-92d8-9167be4fcd25}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\assets\uox3.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
