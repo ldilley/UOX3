@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		640750F729192FC5009F004D /* jsinterp.h in Headers */ = {isa = PBXBuildFile; fileRef = 6407509F29192FC4009F004D /* jsinterp.h */; };
+		640750F829192FC5009F004D /* jslock.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750A029192FC4009F004D /* jslock.h */; };
+		640750F929192FC5009F004D /* jsdate.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750A129192FC4009F004D /* jsdate.c */; };
+		640750FA29192FC5009F004D /* jscpucfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750A229192FC4009F004D /* jscpucfg.h */; };
+		640750FB29192FC5009F004D /* jsdhash.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750A329192FC4009F004D /* jsdhash.c */; };
+		640750FC29192FC5009F004D /* jsregexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750A429192FC4009F004D /* jsregexp.h */; };
+		640750FD29192FC5009F004D /* jsbit.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750A529192FC4009F004D /* jsbit.h */; };
+		640750FE29192FC5009F004D /* jsgc.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750A629192FC4009F004D /* jsgc.h */; };
+		640750FF29192FC5009F004D /* jsexn.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750A729192FC4009F004D /* jsexn.c */; };
+		6407510029192FC5009F004D /* jsopcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750A829192FC4009F004D /* jsopcode.c */; };
+		6407510129192FC5009F004D /* jsobj.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750A929192FC4009F004D /* jsobj.c */; };
+		6407510229192FC5009F004D /* jsautocfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750AA29192FC4009F004D /* jsautocfg.h */; };
+		6407510329192FC5009F004D /* jsmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750AB29192FC4009F004D /* jsmath.h */; };
+		6407510429192FC5009F004D /* jsconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750AC29192FC4009F004D /* jsconfig.h */; };
+		6407510529192FC5009F004D /* jsnum.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750AD29192FC4009F004D /* jsnum.c */; };
+		6407510629192FC5009F004D /* jsemit.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750AE29192FC4009F004D /* jsemit.c */; };
+		6407510729192FC5009F004D /* jsiter.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750AF29192FC4009F004D /* jsiter.c */; };
+		6407510829192FC5009F004D /* jsobj.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750B029192FC5009F004D /* jsobj.h */; };
+		6407510929192FC5009F004D /* jsscope.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750B129192FC5009F004D /* jsscope.h */; };
+		6407510A29192FC5009F004D /* jsscript.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750B229192FC5009F004D /* jsscript.c */; };
+		6407510B29192FC5009F004D /* jsstddef.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750B329192FC5009F004D /* jsstddef.h */; };
+		6407510C29192FC5009F004D /* jsxdrapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750B429192FC5009F004D /* jsxdrapi.c */; };
+		6407510D29192FC5009F004D /* jsapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750B529192FC5009F004D /* jsapi.h */; };
+		6407510E29192FC5009F004D /* jsbool.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750B629192FC5009F004D /* jsbool.h */; };
+		6407510F29192FC5009F004D /* jsscope.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750B729192FC5009F004D /* jsscope.c */; };
+		6407511029192FC5009F004D /* jslock.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750B829192FC5009F004D /* jslock.c */; };
+		6407511129192FC5009F004D /* jsatom.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750B929192FC5009F004D /* jsatom.h */; };
+		6407511229192FC5009F004D /* jsxdrapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750BA29192FC5009F004D /* jsxdrapi.h */; };
+		6407511329192FC5009F004D /* jsregexp.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750BC29192FC5009F004D /* jsregexp.c */; };
+		6407511429192FC5009F004D /* jslibmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750BD29192FC5009F004D /* jslibmath.h */; };
+		6407511529192FC6009F004D /* jsstr.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750BE29192FC5009F004D /* jsstr.h */; };
+		6407511629192FC6009F004D /* jsutil.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750BF29192FC5009F004D /* jsutil.c */; };
+		6407511729192FC6009F004D /* jsxml.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750C029192FC5009F004D /* jsxml.c */; };
+		6407511829192FC6009F004D /* jsdate.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750C129192FC5009F004D /* jsdate.h */; };
+		6407511929192FC6009F004D /* jsclist.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750C229192FC5009F004D /* jsclist.h */; };
+		6407511A29192FC6009F004D /* jsdbgapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750C329192FC5009F004D /* jsdbgapi.h */; };
+		6407511B29192FC6009F004D /* jsparse.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750C429192FC5009F004D /* jsparse.h */; };
+		6407511C29192FC6009F004D /* jspubtd.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750C529192FC5009F004D /* jspubtd.h */; };
+		6407511D29192FC6009F004D /* jsinterp.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750C629192FC5009F004D /* jsinterp.c */; };
+		6407511E29192FC6009F004D /* jshash.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750C729192FC5009F004D /* jshash.c */; };
+		6407511F29192FC6009F004D /* jsdtoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750C829192FC5009F004D /* jsdtoa.h */; };
+		6407512029192FC6009F004D /* jsarray.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750C929192FC5009F004D /* jsarray.h */; };
+		6407512129192FC6009F004D /* jsarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750CA29192FC5009F004D /* jsarray.c */; };
+		6407512229192FC6009F004D /* jslog2.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750CB29192FC5009F004D /* jslog2.c */; };
+		6407512329192FC6009F004D /* jslong.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750CC29192FC5009F004D /* jslong.c */; };
+		6407512429192FC6009F004D /* jslong.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750CD29192FC5009F004D /* jslong.h */; };
+		6407512529192FC6009F004D /* jsprf.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750CE29192FC5009F004D /* jsprf.c */; };
+		6407512629192FC6009F004D /* jsfun.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750CF29192FC5009F004D /* jsfun.c */; };
+		6407512729192FC6009F004D /* jsscan.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750D029192FC5009F004D /* jsscan.c */; };
+		6407512829192FC6009F004D /* jsutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750D129192FC5009F004D /* jsutil.h */; };
+		6407512929192FC6009F004D /* jsapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750D229192FC5009F004D /* jsapi.c */; };
+		6407512A29192FC6009F004D /* jsbool.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750D329192FC5009F004D /* jsbool.c */; };
+		6407512B29192FC6009F004D /* prmjtime.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750D429192FC5009F004D /* prmjtime.h */; };
+		6407512C29192FC6009F004D /* jsxml.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750D529192FC5009F004D /* jsxml.h */; };
+		6407512D29192FC6009F004D /* jshash.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750D629192FC5009F004D /* jshash.h */; };
+		6407512E29192FC6009F004D /* jsosdep.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750D729192FC5009F004D /* jsosdep.h */; };
+		6407512F29192FC6009F004D /* prmjtime.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750D829192FC5009F004D /* prmjtime.c */; };
+		6407513029192FC6009F004D /* jscompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750D929192FC5009F004D /* jscompat.h */; };
+		6407513129192FC6009F004D /* jsarena.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750DA29192FC5009F004D /* jsarena.c */; };
+		6407513229192FC6009F004D /* jsatom.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750DB29192FC5009F004D /* jsatom.c */; };
+		6407513329192FC6009F004D /* jsscript.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750DC29192FC5009F004D /* jsscript.h */; };
+		6407513429192FC6009F004D /* jsdbgapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750DD29192FC5009F004D /* jsdbgapi.c */; };
+		6407513529192FC6009F004D /* jsfun.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750DE29192FC5009F004D /* jsfun.h */; };
+		6407513629192FC6009F004D /* jscntxt.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750DF29192FC5009F004D /* jscntxt.c */; };
+		6407513729192FC6009F004D /* jsnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750E129192FC5009F004D /* jsnum.h */; };
+		6407513829192FC6009F004D /* jsemit.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750E229192FC5009F004D /* jsemit.h */; };
+		6407513929192FC6009F004D /* jsopcode.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750E429192FC5009F004D /* jsopcode.h */; };
+		6407513A29192FC6009F004D /* jscntxt.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750E529192FC5009F004D /* jscntxt.h */; };
+		6407513B29192FC6009F004D /* jsotypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750E629192FC5009F004D /* jsotypes.h */; };
+		6407513C29192FC6009F004D /* jsstr.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750E729192FC5009F004D /* jsstr.c */; };
+		6407513D29192FC6009F004D /* jsdtoa.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750E829192FC5009F004D /* jsdtoa.c */; };
+		6407513E29192FC6009F004D /* jsprvtd.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750E929192FC5009F004D /* jsprvtd.h */; };
+		6407513F29192FC6009F004D /* jsexn.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750EA29192FC5009F004D /* jsexn.h */; };
+		6407514029192FC6009F004D /* jsautokw.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750EB29192FC5009F004D /* jsautokw.h */; };
+		6407514129192FC6009F004D /* jsarena.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750EC29192FC5009F004D /* jsarena.h */; };
+		6407514229192FC6009F004D /* jsiter.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750ED29192FC5009F004D /* jsiter.h */; };
+		6407514329192FC6009F004D /* jsgc.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750EE29192FC5009F004D /* jsgc.c */; };
+		6407514429192FC6009F004D /* jsparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750EF29192FC5009F004D /* jsparse.c */; };
+		6407514529192FC6009F004D /* jsscan.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750F129192FC5009F004D /* jsscan.h */; };
+		6407514629192FC6009F004D /* jstypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750F229192FC5009F004D /* jstypes.h */; };
+		6407514729192FC6009F004D /* jsdhash.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750F329192FC5009F004D /* jsdhash.h */; };
+		6407514829192FC6009F004D /* jsprf.h in Headers */ = {isa = PBXBuildFile; fileRef = 640750F529192FC5009F004D /* jsprf.h */; };
+		6407514929192FC6009F004D /* jsmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 640750F629192FC5009F004D /* jsmath.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6407509829192F61009F004D /* libjsengine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libjsengine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6407509F29192FC4009F004D /* jsinterp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsinterp.h; path = ../jsinterp.h; sourceTree = "<group>"; };
+		640750A029192FC4009F004D /* jslock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jslock.h; path = ../jslock.h; sourceTree = "<group>"; };
+		640750A129192FC4009F004D /* jsdate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsdate.c; path = ../jsdate.c; sourceTree = "<group>"; };
+		640750A229192FC4009F004D /* jscpucfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jscpucfg.h; path = ../jscpucfg.h; sourceTree = "<group>"; };
+		640750A329192FC4009F004D /* jsdhash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsdhash.c; path = ../jsdhash.c; sourceTree = "<group>"; };
+		640750A429192FC4009F004D /* jsregexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsregexp.h; path = ../jsregexp.h; sourceTree = "<group>"; };
+		640750A529192FC4009F004D /* jsbit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsbit.h; path = ../jsbit.h; sourceTree = "<group>"; };
+		640750A629192FC4009F004D /* jsgc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsgc.h; path = ../jsgc.h; sourceTree = "<group>"; };
+		640750A729192FC4009F004D /* jsexn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsexn.c; path = ../jsexn.c; sourceTree = "<group>"; };
+		640750A829192FC4009F004D /* jsopcode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsopcode.c; path = ../jsopcode.c; sourceTree = "<group>"; };
+		640750A929192FC4009F004D /* jsobj.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsobj.c; path = ../jsobj.c; sourceTree = "<group>"; };
+		640750AA29192FC4009F004D /* jsautocfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsautocfg.h; path = ../jsautocfg.h; sourceTree = "<group>"; };
+		640750AB29192FC4009F004D /* jsmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsmath.h; path = ../jsmath.h; sourceTree = "<group>"; };
+		640750AC29192FC4009F004D /* jsconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsconfig.h; path = ../jsconfig.h; sourceTree = "<group>"; };
+		640750AD29192FC4009F004D /* jsnum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsnum.c; path = ../jsnum.c; sourceTree = "<group>"; };
+		640750AE29192FC4009F004D /* jsemit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsemit.c; path = ../jsemit.c; sourceTree = "<group>"; };
+		640750AF29192FC4009F004D /* jsiter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsiter.c; path = ../jsiter.c; sourceTree = "<group>"; };
+		640750B029192FC5009F004D /* jsobj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsobj.h; path = ../jsobj.h; sourceTree = "<group>"; };
+		640750B129192FC5009F004D /* jsscope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsscope.h; path = ../jsscope.h; sourceTree = "<group>"; };
+		640750B229192FC5009F004D /* jsscript.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsscript.c; path = ../jsscript.c; sourceTree = "<group>"; };
+		640750B329192FC5009F004D /* jsstddef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsstddef.h; path = ../jsstddef.h; sourceTree = "<group>"; };
+		640750B429192FC5009F004D /* jsxdrapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsxdrapi.c; path = ../jsxdrapi.c; sourceTree = "<group>"; };
+		640750B529192FC5009F004D /* jsapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsapi.h; path = ../jsapi.h; sourceTree = "<group>"; };
+		640750B629192FC5009F004D /* jsbool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsbool.h; path = ../jsbool.h; sourceTree = "<group>"; };
+		640750B729192FC5009F004D /* jsscope.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsscope.c; path = ../jsscope.c; sourceTree = "<group>"; };
+		640750B829192FC5009F004D /* jslock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jslock.c; path = ../jslock.c; sourceTree = "<group>"; };
+		640750B929192FC5009F004D /* jsatom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsatom.h; path = ../jsatom.h; sourceTree = "<group>"; };
+		640750BA29192FC5009F004D /* jsxdrapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsxdrapi.h; path = ../jsxdrapi.h; sourceTree = "<group>"; };
+		640750BB29192FC5009F004D /* jsfile.msg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = jsfile.msg; path = ../jsfile.msg; sourceTree = "<group>"; };
+		640750BC29192FC5009F004D /* jsregexp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsregexp.c; path = ../jsregexp.c; sourceTree = "<group>"; };
+		640750BD29192FC5009F004D /* jslibmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jslibmath.h; path = ../jslibmath.h; sourceTree = "<group>"; };
+		640750BE29192FC5009F004D /* jsstr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsstr.h; path = ../jsstr.h; sourceTree = "<group>"; };
+		640750BF29192FC5009F004D /* jsutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsutil.c; path = ../jsutil.c; sourceTree = "<group>"; };
+		640750C029192FC5009F004D /* jsxml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsxml.c; path = ../jsxml.c; sourceTree = "<group>"; };
+		640750C129192FC5009F004D /* jsdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsdate.h; path = ../jsdate.h; sourceTree = "<group>"; };
+		640750C229192FC5009F004D /* jsclist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsclist.h; path = ../jsclist.h; sourceTree = "<group>"; };
+		640750C329192FC5009F004D /* jsdbgapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsdbgapi.h; path = ../jsdbgapi.h; sourceTree = "<group>"; };
+		640750C429192FC5009F004D /* jsparse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsparse.h; path = ../jsparse.h; sourceTree = "<group>"; };
+		640750C529192FC5009F004D /* jspubtd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jspubtd.h; path = ../jspubtd.h; sourceTree = "<group>"; };
+		640750C629192FC5009F004D /* jsinterp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsinterp.c; path = ../jsinterp.c; sourceTree = "<group>"; };
+		640750C729192FC5009F004D /* jshash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jshash.c; path = ../jshash.c; sourceTree = "<group>"; };
+		640750C829192FC5009F004D /* jsdtoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsdtoa.h; path = ../jsdtoa.h; sourceTree = "<group>"; };
+		640750C929192FC5009F004D /* jsarray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsarray.h; path = ../jsarray.h; sourceTree = "<group>"; };
+		640750CA29192FC5009F004D /* jsarray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsarray.c; path = ../jsarray.c; sourceTree = "<group>"; };
+		640750CB29192FC5009F004D /* jslog2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jslog2.c; path = ../jslog2.c; sourceTree = "<group>"; };
+		640750CC29192FC5009F004D /* jslong.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jslong.c; path = ../jslong.c; sourceTree = "<group>"; };
+		640750CD29192FC5009F004D /* jslong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jslong.h; path = ../jslong.h; sourceTree = "<group>"; };
+		640750CE29192FC5009F004D /* jsprf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsprf.c; path = ../jsprf.c; sourceTree = "<group>"; };
+		640750CF29192FC5009F004D /* jsfun.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsfun.c; path = ../jsfun.c; sourceTree = "<group>"; };
+		640750D029192FC5009F004D /* jsscan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsscan.c; path = ../jsscan.c; sourceTree = "<group>"; };
+		640750D129192FC5009F004D /* jsutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsutil.h; path = ../jsutil.h; sourceTree = "<group>"; };
+		640750D229192FC5009F004D /* jsapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsapi.c; path = ../jsapi.c; sourceTree = "<group>"; };
+		640750D329192FC5009F004D /* jsbool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsbool.c; path = ../jsbool.c; sourceTree = "<group>"; };
+		640750D429192FC5009F004D /* prmjtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = prmjtime.h; path = ../prmjtime.h; sourceTree = "<group>"; };
+		640750D529192FC5009F004D /* jsxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsxml.h; path = ../jsxml.h; sourceTree = "<group>"; };
+		640750D629192FC5009F004D /* jshash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jshash.h; path = ../jshash.h; sourceTree = "<group>"; };
+		640750D729192FC5009F004D /* jsosdep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsosdep.h; path = ../jsosdep.h; sourceTree = "<group>"; };
+		640750D829192FC5009F004D /* prmjtime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = prmjtime.c; path = ../prmjtime.c; sourceTree = "<group>"; };
+		640750D929192FC5009F004D /* jscompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jscompat.h; path = ../jscompat.h; sourceTree = "<group>"; };
+		640750DA29192FC5009F004D /* jsarena.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsarena.c; path = ../jsarena.c; sourceTree = "<group>"; };
+		640750DB29192FC5009F004D /* jsatom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsatom.c; path = ../jsatom.c; sourceTree = "<group>"; };
+		640750DC29192FC5009F004D /* jsscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsscript.h; path = ../jsscript.h; sourceTree = "<group>"; };
+		640750DD29192FC5009F004D /* jsdbgapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsdbgapi.c; path = ../jsdbgapi.c; sourceTree = "<group>"; };
+		640750DE29192FC5009F004D /* jsfun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsfun.h; path = ../jsfun.h; sourceTree = "<group>"; };
+		640750DF29192FC5009F004D /* jscntxt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jscntxt.c; path = ../jscntxt.c; sourceTree = "<group>"; };
+		640750E029192FC5009F004D /* js.msg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = js.msg; path = ../js.msg; sourceTree = "<group>"; };
+		640750E129192FC5009F004D /* jsnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsnum.h; path = ../jsnum.h; sourceTree = "<group>"; };
+		640750E229192FC5009F004D /* jsemit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsemit.h; path = ../jsemit.h; sourceTree = "<group>"; };
+		640750E329192FC5009F004D /* jsopcode.tbl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = jsopcode.tbl; path = ../jsopcode.tbl; sourceTree = "<group>"; };
+		640750E429192FC5009F004D /* jsopcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsopcode.h; path = ../jsopcode.h; sourceTree = "<group>"; };
+		640750E529192FC5009F004D /* jscntxt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jscntxt.h; path = ../jscntxt.h; sourceTree = "<group>"; };
+		640750E629192FC5009F004D /* jsotypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsotypes.h; path = ../jsotypes.h; sourceTree = "<group>"; };
+		640750E729192FC5009F004D /* jsstr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsstr.c; path = ../jsstr.c; sourceTree = "<group>"; };
+		640750E829192FC5009F004D /* jsdtoa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsdtoa.c; path = ../jsdtoa.c; sourceTree = "<group>"; };
+		640750E929192FC5009F004D /* jsprvtd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsprvtd.h; path = ../jsprvtd.h; sourceTree = "<group>"; };
+		640750EA29192FC5009F004D /* jsexn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsexn.h; path = ../jsexn.h; sourceTree = "<group>"; };
+		640750EB29192FC5009F004D /* jsautokw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsautokw.h; path = ../jsautokw.h; sourceTree = "<group>"; };
+		640750EC29192FC5009F004D /* jsarena.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsarena.h; path = ../jsarena.h; sourceTree = "<group>"; };
+		640750ED29192FC5009F004D /* jsiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsiter.h; path = ../jsiter.h; sourceTree = "<group>"; };
+		640750EE29192FC5009F004D /* jsgc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsgc.c; path = ../jsgc.c; sourceTree = "<group>"; };
+		640750EF29192FC5009F004D /* jsparse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsparse.c; path = ../jsparse.c; sourceTree = "<group>"; };
+		640750F029192FC5009F004D /* jsproto.tbl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = jsproto.tbl; path = ../jsproto.tbl; sourceTree = "<group>"; };
+		640750F129192FC5009F004D /* jsscan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsscan.h; path = ../jsscan.h; sourceTree = "<group>"; };
+		640750F229192FC5009F004D /* jstypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jstypes.h; path = ../jstypes.h; sourceTree = "<group>"; };
+		640750F329192FC5009F004D /* jsdhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsdhash.h; path = ../jsdhash.h; sourceTree = "<group>"; };
+		640750F429192FC5009F004D /* jskeyword.tbl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = jskeyword.tbl; path = ../jskeyword.tbl; sourceTree = "<group>"; };
+		640750F529192FC5009F004D /* jsprf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jsprf.h; path = ../jsprf.h; sourceTree = "<group>"; };
+		640750F629192FC5009F004D /* jsmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jsmath.c; path = ../jsmath.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6407509629192F61009F004D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6407508F29192F61009F004D = {
+			isa = PBXGroup;
+			children = (
+				640750E029192FC5009F004D /* js.msg */,
+				640750D229192FC5009F004D /* jsapi.c */,
+				640750B529192FC5009F004D /* jsapi.h */,
+				640750DA29192FC5009F004D /* jsarena.c */,
+				640750EC29192FC5009F004D /* jsarena.h */,
+				640750CA29192FC5009F004D /* jsarray.c */,
+				640750C929192FC5009F004D /* jsarray.h */,
+				640750DB29192FC5009F004D /* jsatom.c */,
+				640750B929192FC5009F004D /* jsatom.h */,
+				640750AA29192FC4009F004D /* jsautocfg.h */,
+				640750EB29192FC5009F004D /* jsautokw.h */,
+				640750A529192FC4009F004D /* jsbit.h */,
+				640750D329192FC5009F004D /* jsbool.c */,
+				640750B629192FC5009F004D /* jsbool.h */,
+				640750C229192FC5009F004D /* jsclist.h */,
+				640750DF29192FC5009F004D /* jscntxt.c */,
+				640750E529192FC5009F004D /* jscntxt.h */,
+				640750D929192FC5009F004D /* jscompat.h */,
+				640750AC29192FC4009F004D /* jsconfig.h */,
+				640750A229192FC4009F004D /* jscpucfg.h */,
+				640750A129192FC4009F004D /* jsdate.c */,
+				640750C129192FC5009F004D /* jsdate.h */,
+				640750DD29192FC5009F004D /* jsdbgapi.c */,
+				640750C329192FC5009F004D /* jsdbgapi.h */,
+				640750A329192FC4009F004D /* jsdhash.c */,
+				640750F329192FC5009F004D /* jsdhash.h */,
+				640750E829192FC5009F004D /* jsdtoa.c */,
+				640750C829192FC5009F004D /* jsdtoa.h */,
+				640750AE29192FC4009F004D /* jsemit.c */,
+				640750E229192FC5009F004D /* jsemit.h */,
+				640750A729192FC4009F004D /* jsexn.c */,
+				640750EA29192FC5009F004D /* jsexn.h */,
+				640750BB29192FC5009F004D /* jsfile.msg */,
+				640750CF29192FC5009F004D /* jsfun.c */,
+				640750DE29192FC5009F004D /* jsfun.h */,
+				640750EE29192FC5009F004D /* jsgc.c */,
+				640750A629192FC4009F004D /* jsgc.h */,
+				640750C729192FC5009F004D /* jshash.c */,
+				640750D629192FC5009F004D /* jshash.h */,
+				640750C629192FC5009F004D /* jsinterp.c */,
+				6407509F29192FC4009F004D /* jsinterp.h */,
+				640750AF29192FC4009F004D /* jsiter.c */,
+				640750ED29192FC5009F004D /* jsiter.h */,
+				640750F429192FC5009F004D /* jskeyword.tbl */,
+				640750BD29192FC5009F004D /* jslibmath.h */,
+				640750B829192FC5009F004D /* jslock.c */,
+				640750A029192FC4009F004D /* jslock.h */,
+				640750CB29192FC5009F004D /* jslog2.c */,
+				640750CC29192FC5009F004D /* jslong.c */,
+				640750CD29192FC5009F004D /* jslong.h */,
+				640750F629192FC5009F004D /* jsmath.c */,
+				640750AB29192FC4009F004D /* jsmath.h */,
+				640750AD29192FC4009F004D /* jsnum.c */,
+				640750E129192FC5009F004D /* jsnum.h */,
+				640750A929192FC4009F004D /* jsobj.c */,
+				640750B029192FC5009F004D /* jsobj.h */,
+				640750A829192FC4009F004D /* jsopcode.c */,
+				640750E429192FC5009F004D /* jsopcode.h */,
+				640750E329192FC5009F004D /* jsopcode.tbl */,
+				640750D729192FC5009F004D /* jsosdep.h */,
+				640750E629192FC5009F004D /* jsotypes.h */,
+				640750EF29192FC5009F004D /* jsparse.c */,
+				640750C429192FC5009F004D /* jsparse.h */,
+				640750CE29192FC5009F004D /* jsprf.c */,
+				640750F529192FC5009F004D /* jsprf.h */,
+				640750F029192FC5009F004D /* jsproto.tbl */,
+				640750E929192FC5009F004D /* jsprvtd.h */,
+				640750C529192FC5009F004D /* jspubtd.h */,
+				640750BC29192FC5009F004D /* jsregexp.c */,
+				640750A429192FC4009F004D /* jsregexp.h */,
+				640750D029192FC5009F004D /* jsscan.c */,
+				640750F129192FC5009F004D /* jsscan.h */,
+				640750B729192FC5009F004D /* jsscope.c */,
+				640750B129192FC5009F004D /* jsscope.h */,
+				640750B229192FC5009F004D /* jsscript.c */,
+				640750DC29192FC5009F004D /* jsscript.h */,
+				640750B329192FC5009F004D /* jsstddef.h */,
+				640750E729192FC5009F004D /* jsstr.c */,
+				640750BE29192FC5009F004D /* jsstr.h */,
+				640750F229192FC5009F004D /* jstypes.h */,
+				640750BF29192FC5009F004D /* jsutil.c */,
+				640750D129192FC5009F004D /* jsutil.h */,
+				640750B429192FC5009F004D /* jsxdrapi.c */,
+				640750BA29192FC5009F004D /* jsxdrapi.h */,
+				640750C029192FC5009F004D /* jsxml.c */,
+				640750D529192FC5009F004D /* jsxml.h */,
+				640750D829192FC5009F004D /* prmjtime.c */,
+				640750D429192FC5009F004D /* prmjtime.h */,
+				6407509929192F61009F004D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6407509929192F61009F004D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6407509829192F61009F004D /* libjsengine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6407509429192F61009F004D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6407513329192FC6009F004D /* jsscript.h in Headers */,
+				6407514129192FC6009F004D /* jsarena.h in Headers */,
+				6407510429192FC5009F004D /* jsconfig.h in Headers */,
+				6407513029192FC6009F004D /* jscompat.h in Headers */,
+				6407513729192FC6009F004D /* jsnum.h in Headers */,
+				6407512029192FC6009F004D /* jsarray.h in Headers */,
+				6407510829192FC5009F004D /* jsobj.h in Headers */,
+				6407514229192FC6009F004D /* jsiter.h in Headers */,
+				640750FC29192FC5009F004D /* jsregexp.h in Headers */,
+				6407510B29192FC5009F004D /* jsstddef.h in Headers */,
+				640750F829192FC5009F004D /* jslock.h in Headers */,
+				6407511B29192FC6009F004D /* jsparse.h in Headers */,
+				6407511229192FC5009F004D /* jsxdrapi.h in Headers */,
+				6407512B29192FC6009F004D /* prmjtime.h in Headers */,
+				6407513E29192FC6009F004D /* jsprvtd.h in Headers */,
+				6407510D29192FC5009F004D /* jsapi.h in Headers */,
+				640750FA29192FC5009F004D /* jscpucfg.h in Headers */,
+				6407514529192FC6009F004D /* jsscan.h in Headers */,
+				6407514829192FC6009F004D /* jsprf.h in Headers */,
+				6407513B29192FC6009F004D /* jsotypes.h in Headers */,
+				6407514029192FC6009F004D /* jsautokw.h in Headers */,
+				640750FE29192FC5009F004D /* jsgc.h in Headers */,
+				6407511829192FC6009F004D /* jsdate.h in Headers */,
+				6407511F29192FC6009F004D /* jsdtoa.h in Headers */,
+				6407512E29192FC6009F004D /* jsosdep.h in Headers */,
+				6407511529192FC6009F004D /* jsstr.h in Headers */,
+				6407511929192FC6009F004D /* jsclist.h in Headers */,
+				6407513529192FC6009F004D /* jsfun.h in Headers */,
+				6407512829192FC6009F004D /* jsutil.h in Headers */,
+				6407512D29192FC6009F004D /* jshash.h in Headers */,
+				6407511129192FC5009F004D /* jsatom.h in Headers */,
+				6407510229192FC5009F004D /* jsautocfg.h in Headers */,
+				6407512C29192FC6009F004D /* jsxml.h in Headers */,
+				6407510329192FC5009F004D /* jsmath.h in Headers */,
+				6407514629192FC6009F004D /* jstypes.h in Headers */,
+				6407511A29192FC6009F004D /* jsdbgapi.h in Headers */,
+				640750FD29192FC5009F004D /* jsbit.h in Headers */,
+				6407513A29192FC6009F004D /* jscntxt.h in Headers */,
+				640750F729192FC5009F004D /* jsinterp.h in Headers */,
+				6407513929192FC6009F004D /* jsopcode.h in Headers */,
+				6407511429192FC5009F004D /* jslibmath.h in Headers */,
+				6407510929192FC5009F004D /* jsscope.h in Headers */,
+				6407512429192FC6009F004D /* jslong.h in Headers */,
+				6407511C29192FC6009F004D /* jspubtd.h in Headers */,
+				6407513829192FC6009F004D /* jsemit.h in Headers */,
+				6407513F29192FC6009F004D /* jsexn.h in Headers */,
+				6407510E29192FC5009F004D /* jsbool.h in Headers */,
+				6407514729192FC6009F004D /* jsdhash.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6407509729192F61009F004D /* jsengine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6407509C29192F61009F004D /* Build configuration list for PBXNativeTarget "jsengine" */;
+			buildPhases = (
+				6407509429192F61009F004D /* Headers */,
+				6407509529192F61009F004D /* Sources */,
+				6407509629192F61009F004D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jsengine;
+			productName = jsengine;
+			productReference = 6407509829192F61009F004D /* libjsengine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6407509029192F61009F004D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				ORGANIZATIONNAME = "UOX Development";
+				TargetAttributes = {
+					6407509729192F61009F004D = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 6407509329192F61009F004D /* Build configuration list for PBXProject "jsengine" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6407508F29192F61009F004D;
+			productRefGroup = 6407509929192F61009F004D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6407509729192F61009F004D /* jsengine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6407509529192F61009F004D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640750FF29192FC5009F004D /* jsexn.c in Sources */,
+				6407512F29192FC6009F004D /* prmjtime.c in Sources */,
+				6407510129192FC5009F004D /* jsobj.c in Sources */,
+				6407513429192FC6009F004D /* jsdbgapi.c in Sources */,
+				6407510A29192FC5009F004D /* jsscript.c in Sources */,
+				6407511029192FC5009F004D /* jslock.c in Sources */,
+				6407512629192FC6009F004D /* jsfun.c in Sources */,
+				6407513129192FC6009F004D /* jsarena.c in Sources */,
+				6407514329192FC6009F004D /* jsgc.c in Sources */,
+				6407510729192FC5009F004D /* jsiter.c in Sources */,
+				6407514429192FC6009F004D /* jsparse.c in Sources */,
+				640750F929192FC5009F004D /* jsdate.c in Sources */,
+				6407512129192FC6009F004D /* jsarray.c in Sources */,
+				6407511729192FC6009F004D /* jsxml.c in Sources */,
+				6407510529192FC5009F004D /* jsnum.c in Sources */,
+				6407512529192FC6009F004D /* jsprf.c in Sources */,
+				6407510C29192FC5009F004D /* jsxdrapi.c in Sources */,
+				6407512229192FC6009F004D /* jslog2.c in Sources */,
+				6407513229192FC6009F004D /* jsatom.c in Sources */,
+				6407510029192FC5009F004D /* jsopcode.c in Sources */,
+				6407511D29192FC6009F004D /* jsinterp.c in Sources */,
+				6407512929192FC6009F004D /* jsapi.c in Sources */,
+				6407511329192FC5009F004D /* jsregexp.c in Sources */,
+				6407512329192FC6009F004D /* jslong.c in Sources */,
+				6407512729192FC6009F004D /* jsscan.c in Sources */,
+				6407510F29192FC5009F004D /* jsscope.c in Sources */,
+				6407513629192FC6009F004D /* jscntxt.c in Sources */,
+				6407512A29192FC6009F004D /* jsbool.c in Sources */,
+				6407511E29192FC6009F004D /* jshash.c in Sources */,
+				640750FB29192FC5009F004D /* jsdhash.c in Sources */,
+				6407511629192FC6009F004D /* jsutil.c in Sources */,
+				6407513C29192FC6009F004D /* jsstr.c in Sources */,
+				6407513D29192FC6009F004D /* jsdtoa.c in Sources */,
+				6407514929192FC6009F004D /* jsmath.c in Sources */,
+				6407510629192FC5009F004D /* jsemit.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6407509A29192F61009F004D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6407509B29192F61009F004D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6407509D29192F61009F004D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
+				CLANG_WARN_UNREACHABLE_CODE = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CF264WE69M;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					XP_UNIX,
+					EXPORT_JS_API,
+					HAVE_VA_LIST_AS_ARRAY,
+					SVR4,
+					SYSV,
+					POSIX_SOURCE,
+					_DEFAULT_SOURCE,
+					HAVE_LOCAL_TIME_R,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ../;
+				WARNING_CFLAGS = (
+					"-Wno-shift-negative-value",
+					"-Wno-implicit-function-declaration",
+					"-Wno-strict-prototypes",
+					"-Wno-logical-not-parentheses",
+					"-Wno-int-to-void-pointer-cast",
+					"-Wno-pointer-to-int-cast",
+					"-Wno-non-literal-null-conversion",
+					"-Wno-incompatible-pointer-types",
+				);
+			};
+			name = Debug;
+		};
+		6407509E29192F61009F004D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_COMMA = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
+				CLANG_WARN_UNREACHABLE_CODE = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CF264WE69M;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					XP_UNIX,
+					EXPORT_JS_API,
+					HAVE_VA_LIST_AS_ARRAY,
+					SVR4,
+					SYSV,
+					POSIX_SOURCE,
+					_DEFAULT_SOURCE,
+					HAVE_LOCAL_TIME_R,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ../;
+				WARNING_CFLAGS = (
+					"-Wno-shift-negative-value",
+					"-Wno-implicit-function-declaration",
+					"-Wno-strict-prototypes",
+					"-Wno-logical-not-parentheses",
+					"-Wno-int-to-void-pointer-cast",
+					"-Wno-pointer-to-int-cast",
+					"-Wno-non-literal-null-conversion",
+					"-Wno-incompatible-pointer-types",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6407509329192F61009F004D /* Build configuration list for PBXProject "jsengine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6407509A29192F61009F004D /* Debug */,
+				6407509B29192F61009F004D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6407509C29192F61009F004D /* Build configuration list for PBXNativeTarget "jsengine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6407509D29192F61009F004D /* Debug */,
+				6407509E29192F61009F004D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6407509029192F61009F004D /* Project object */;
+}
