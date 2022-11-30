@@ -62,7 +62,7 @@
     <ClCompile Include="..\..\source\movement.cpp" />
     <ClCompile Include="..\..\source\msgboard.cpp" />
     <ClCompile Include="..\..\source\MultiMul.cpp" />
-    <ClCompile Include="..\..\..\source\network.cpp" />
+    <ClCompile Include="..\..\source\network.cpp" />
     <ClCompile Include="..\..\source\npcs.cpp" />
     <ClCompile Include="..\..\source\ObjectFactory.cpp" />
     <ClCompile Include="..\..\source\osunique.cpp" />
@@ -173,14 +173,6 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\asset\uox3.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\zlib\ide\zlib.vcxproj">
-      <Project>{89dd830d-029b-4f44-a470-baa33ea525ac}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\spidermonkey\ide\jsengine.vcxproj">
-      <Project>{59fffeb5-b427-4e86-92d8-9167be4fcd25}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\assets\uox3.rc" />

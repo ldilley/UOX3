@@ -275,9 +275,6 @@
     <ClCompile Include="..\..\source\MultiMul.cpp">
       <Filter>Source Files\UOData</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\source\network.cpp">
-      <Filter>Source Files\Network</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\source\IP4Address.cpp">
       <Filter>Source Files\Network</Filter>
     </ClCompile>
@@ -299,6 +296,7 @@
     <ClCompile Include="..\..\source\osunique.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\network.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\ConfigOS.h">
@@ -520,12 +518,6 @@
     <ClInclude Include="..\..\source\StringUtility.hpp">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>
-    <ClInclude Include="T..\..\source\imeUtility.hpp">
-      <Filter>Header Files\Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="c..\..\source\Socket.h">
-      <Filter>Header Files\Base Objects</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\source\EventTimer.hpp">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>
@@ -538,6 +530,8 @@
     <ClInclude Include="..\..\source\ObjectFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\source\cSocket.h" />
+    <ClInclude Include="..\..\source\TimeUtility.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\assets\uox3.rc">
@@ -545,8 +539,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\assets\uox3.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <Image Include="..\..\asset\uox3.ico" />
   </ItemGroup>
 </Project>

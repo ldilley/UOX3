@@ -86,7 +86,7 @@
     <ClInclude Include="..\..\jsnum.h" />
     <ClInclude Include="..\..\jsobj.h" />
     <ClInclude Include="..\..\jsopcode.h" />
-    <ClInclude Include="..\jsosdep.h" />
+    <ClInclude Include="..\..\jsosdep.h" />
     <ClInclude Include="..\..\jsotypes.h" />
     <ClInclude Include="..\..\jsparse.h" />
     <ClInclude Include="..\..\jsprf.h" />
@@ -99,7 +99,7 @@
     <ClInclude Include="..\..\jsstddef.h" />
     <ClInclude Include="..\..\jsstr.h" />
     <ClInclude Include="..\..\jstypes.h" />
-    <ClInclude Include="..\jsutil.h" />
+    <ClInclude Include="..\..\jsutil.h" />
     <ClInclude Include="..\..\jsxdrapi.h" />
     <ClInclude Include="..\..\jsxml.h" />
     <ClInclude Include="..\..\prmjtime.h" />

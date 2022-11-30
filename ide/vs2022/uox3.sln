@@ -5,9 +5,9 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uox3", "uox3.vcxproj", "{53F52F17-159F-4DFB-9C01-553498ACF7A0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "compression", "..\compression\ide\compression.vcxproj", "{89DD830D-029B-4F44-A470-BAA33EA525AC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\..\zlib\ide\vs2022\zlib.vcxproj", "{89DD830D-029B-4F44-A470-BAA33EA525AC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsengine", "..\jsengine\ide\jsengine.vcxproj", "{59FFFEB5-B427-4E86-92D8-9167BE4FCD25}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsengine", "..\..\spidermonkey\ide\vs2022\jsengine.vcxproj", "{59FFFEB5-B427-4E86-92D8-9167BE4FCD25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
