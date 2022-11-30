@@ -20,9 +20,8 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1
         with:
           arch: x64
-      - name: cmake and build
-        run: |
-          mkdir build
-          cd build
-          cmake ../source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles" 
-          cmake --build . --config Release
+      - name: Create build directory
+        run: mkdir build | cd build
+      - name: CMake build
+        run: cmake ../source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles" 
+             cmake --build . --config Release
