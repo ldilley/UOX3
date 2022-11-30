@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.18)
-project(compression VERSION 1 LANGUAGES C)
+project(zlib VERSION 1 LANGUAGES C)
 
-add_library(compression STATIC
+add_library(zlib STATIC
 	adler32.c
 	compress.c
 	crc32.c
@@ -21,7 +21,7 @@ add_library(compression STATIC
 
 if (WIN32)
 
-	target_compile_definitions(compression PRIVATE
+	target_compile_definitions(zlib PRIVATE
 		WIN32
 		_WINDOWS
 		_CRT_SECURE_NO_DEPRECATE
@@ -30,7 +30,7 @@ if (WIN32)
 		_AMD64_
 	)
 	
-	target_compile_options( compression PRIVATE
+	target_compile_options( zlib PRIVATE
 		/W3
 		/sdl-
 		/wd4244 
@@ -45,18 +45,18 @@ if (WIN32)
 	
 else()
 
-	target_compile_definitions( compression PRIVATE
+	target_compile_definitions( zlib PRIVATE
 	)
 	
-	target_compile_options( compression PRIVATE
+	target_compile_options( zlib PRIVATE
 		
 	)
 	if (APPLE)
-		target_compile_options( compression PRIVATE
+		target_compile_options( zlib PRIVATE
 			$<$<CONFIG:Release>:-Os>
 		)
 	else()
-		target_compile_options(compression PRIVATE
+		target_compile_options(zlib PRIVATE
 			$<$<CONFIG:Release>:-O2>
 		)
 	endif(APPLE)

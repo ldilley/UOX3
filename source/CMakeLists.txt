@@ -154,7 +154,7 @@ add_executable(uox3
 	weight.h
 	wholist.h
 	worldmain.h
-	$<$<STREQUAL:${CMAKE_SYSTEM_NAME},Windows>:${PROJECT_SOURCE_DIR}/../asset/appicon.rc>
+	$<$<STREQUAL:${CMAKE_SYSTEM_NAME},Windows>:${PROJECT_SOURCE_DIR}/../asset/uox3.rc>
 )
 
 # *************************************************************************
@@ -212,8 +212,8 @@ endif(WIN32)
 
 target_include_directories(uox3
 	PUBLIC
-		${PROJECT_SOURCE_DIR}/../jsengine
-		${PROJECT_SOURCE_DIR}/../compression
+		${PROJECT_SOURCE_DIR}/../spidermonkey
+		${PROJECT_SOURCE_DIR}/../zlib
 )
 
 # *************************************************************************
@@ -221,7 +221,7 @@ target_include_directories(uox3
 # *************************************************************************
 target_link_libraries(uox3 PRIVATE
 	jsengine
-	compression 
+	zlib 
 	$<$<PLATFORM_ID:Windows>:ws2_32>
 	$<$<PLATFORM_ID:Windows>:Kernel32>
 	$<$<PLATFORM_ID:Linux>:pthread>
@@ -230,5 +230,5 @@ target_link_libraries(uox3 PRIVATE
 # *************************************************************************
 # The items we need built first
 # *************************************************************************
-add_subdirectory(${PROJECT_SOURCE_DIR}/../jsengine subproject/jsengine)
-add_subdirectory(${PROJECT_SOURCE_DIR}/../compression subproject/compression)
+add_subdirectory(${PROJECT_SOURCE_DIR}/../spidermonkey subproject/jsengine)
+add_subdirectory(${PROJECT_SOURCE_DIR}/../zlib subproject/zlib)
