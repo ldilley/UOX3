@@ -228,7 +228,7 @@
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalOptions> /J</AdditionalOptions>
-      <AdditionalIncludeDirectories>../compression;../jsengine</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\zlib;..\..\spidermonkey</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -247,7 +247,7 @@
       <LanguageStandard_C>stdc11</LanguageStandard_C>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalOptions> /J</AdditionalOptions>
-      <AdditionalIncludeDirectories>../compression;../jsengine</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\zlib;..\..\spidermonkey</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
