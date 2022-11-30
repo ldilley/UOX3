@@ -21,7 +21,8 @@ jobs:
       - name: cechckout
         uses: actions/checkout@v3
       - name: Create build directory
-        run: mkdir build | cd build
+        run: mkdir build 
+             cd build
       - name: CMake build
         run: cmake ../source -DCMAKE_BUILD_TYPE=Release  
              cmake --build . --config Release
