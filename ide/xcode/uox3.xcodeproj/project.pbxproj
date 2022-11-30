@@ -876,7 +876,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
 					../../source,
-					../../zlib,
 					../../spidermonkey,
 				);
 				WARNING_CFLAGS = "-Wno-shift-negative-value";
@@ -892,7 +891,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
 					../../source,
-					../../zlib,
 					../../spidermonkey,
 				);
 				WARNING_CFLAGS = "-Wno-shift-negative-value";
