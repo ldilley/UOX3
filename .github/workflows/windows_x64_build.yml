@@ -22,8 +22,7 @@ jobs:
           arch: x64
       - name: Create build directory
         run: |
-            mkdir WINBuild 
-            cd WINbuild
+            cd Build
       - name: CMake build
         run: |
             cmake ../source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles" 

@@ -154,7 +154,7 @@ add_executable(uox3
 	weight.h
 	wholist.h
 	worldmain.h
-	$<$<STREQUAL:${CMAKE_SYSTEM_NAME},Windows>:${PROJECT_SOURCE_DIR}/../asset/uox3.rc>
+	$<$<STREQUAL:${CMAKE_SYSTEM_NAME},Windows>:${PROJECT_SOURCE_DIR}/../assets/uox3.rc>
 )
 
 # *************************************************************************
@@ -162,7 +162,7 @@ add_executable(uox3
 # *************************************************************************
 
 if (WIN32)
-set (CMAKE_RC_STANDARD_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/../asset/)
+set (CMAKE_RC_STANDARD_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/../assets/)
 	
 target_compile_definitions(uox3 PRIVATE
 		WIN32
