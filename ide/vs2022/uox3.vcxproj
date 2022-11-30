@@ -177,6 +177,14 @@
   <ItemGroup>
     <ResourceCompile Include="..\..\assets\uox3.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\spidermonkey\ide\vs2022\jsengine.vcxproj">
+      <Project>{59fffeb5-b427-4e86-92d8-9167be4fcd25}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\zlib\ide\vs2022\zlib.vcxproj">
+      <Project>{89dd830d-029b-4f44-a470-baa33ea525ac}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

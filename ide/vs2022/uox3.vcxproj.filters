@@ -296,7 +296,7 @@
     <ClCompile Include="..\..\source\osunique.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\network.cpp" />
+    <ClCompile Include="..\..\source\network.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\ConfigOS.h">

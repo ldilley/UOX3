@@ -127,7 +127,7 @@
     <None Include="..\..\jsproto.tbl" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\jsapi.c" />
+    <ClCompile Include="..\..\jsapi.c" />
     <ClCompile Include="..\..\jsarena.c" />
     <ClCompile Include="..\..\jsarray.c" />
     <ClCompile Include="..\..\jsatom.c" />
