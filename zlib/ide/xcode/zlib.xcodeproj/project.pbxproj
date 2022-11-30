@@ -36,33 +36,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		64075153291944A8009F004D /* libcompression.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcompression.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6407515A2919452A009F004D /* inffixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inffixed.h; path = ../inffixed.h; sourceTree = "<group>"; };
-		6407515B2919452A009F004D /* zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zutil.h; path = ../zutil.h; sourceTree = "<group>"; };
-		6407515C2919452A009F004D /* inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inflate.h; path = ../inflate.h; sourceTree = "<group>"; };
-		6407515D2919452A009F004D /* gzread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzread.c; path = ../gzread.c; sourceTree = "<group>"; };
-		6407515E2919452A009F004D /* trees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = trees.c; path = ../trees.c; sourceTree = "<group>"; };
-		6407515F2919452A009F004D /* inflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inflate.c; path = ../inflate.c; sourceTree = "<group>"; };
-		640751602919452A009F004D /* inftrees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inftrees.h; path = ../inftrees.h; sourceTree = "<group>"; };
-		640751612919452A009F004D /* gzguts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gzguts.h; path = ../gzguts.h; sourceTree = "<group>"; };
-		640751622919452A009F004D /* gzwrite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzwrite.c; path = ../gzwrite.c; sourceTree = "<group>"; };
-		640751632919452A009F004D /* zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zlib.h; path = ../zlib.h; sourceTree = "<group>"; };
-		640751642919452A009F004D /* adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = adler32.c; path = ../adler32.c; sourceTree = "<group>"; };
-		640751652919452A009F004D /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crc32.h; path = ../crc32.h; sourceTree = "<group>"; };
-		640751662919452A009F004D /* deflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = deflate.h; path = ../deflate.h; sourceTree = "<group>"; };
-		640751672919452A009F004D /* inftrees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inftrees.c; path = ../inftrees.c; sourceTree = "<group>"; };
-		640751682919452A009F004D /* zconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zconf.h; path = ../zconf.h; sourceTree = "<group>"; };
-		640751692919452A009F004D /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zutil.c; path = ../zutil.c; sourceTree = "<group>"; };
-		6407516A2919452A009F004D /* uncompr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uncompr.c; path = ../uncompr.c; sourceTree = "<group>"; };
-		6407516B2919452A009F004D /* inffast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inffast.h; path = ../inffast.h; sourceTree = "<group>"; };
-		6407516C2919452A009F004D /* gzlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzlib.c; path = ../gzlib.c; sourceTree = "<group>"; };
-		6407516D2919452B009F004D /* compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compress.c; path = ../compress.c; sourceTree = "<group>"; };
-		6407516E2919452B009F004D /* inffast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inffast.c; path = ../inffast.c; sourceTree = "<group>"; };
-		6407516F2919452B009F004D /* trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trees.h; path = ../trees.h; sourceTree = "<group>"; };
-		6407517C2919452B009F004D /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crc32.c; path = ../crc32.c; sourceTree = "<group>"; };
-		6407517D2919452B009F004D /* gzclose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzclose.c; path = ../gzclose.c; sourceTree = "<group>"; };
-		6407517E2919452B009F004D /* infback.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = infback.c; path = ../infback.c; sourceTree = "<group>"; };
-		6407517F2919452B009F004D /* deflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = deflate.c; path = ../deflate.c; sourceTree = "<group>"; };
+		64075153291944A8009F004D /* libzlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libzlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6407515A2919452A009F004D /* inffixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inffixed.h; path = ../../inffixed.h; sourceTree = "<group>"; };
+		6407515B2919452A009F004D /* zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zutil.h; path = ../../zutil.h; sourceTree = "<group>"; };
+		6407515C2919452A009F004D /* inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inflate.h; path = ../../inflate.h; sourceTree = "<group>"; };
+		6407515D2919452A009F004D /* gzread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzread.c; path = ../../gzread.c; sourceTree = "<group>"; };
+		6407515E2919452A009F004D /* trees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = trees.c; path = ../../trees.c; sourceTree = "<group>"; };
+		6407515F2919452A009F004D /* inflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inflate.c; path = ../../inflate.c; sourceTree = "<group>"; };
+		640751602919452A009F004D /* inftrees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inftrees.h; path = ../../inftrees.h; sourceTree = "<group>"; };
+		640751612919452A009F004D /* gzguts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gzguts.h; path = ../../gzguts.h; sourceTree = "<group>"; };
+		640751622919452A009F004D /* gzwrite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzwrite.c; path = ../../gzwrite.c; sourceTree = "<group>"; };
+		640751632919452A009F004D /* zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zlib.h; path = ../../zlib.h; sourceTree = "<group>"; };
+		640751642919452A009F004D /* adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = adler32.c; path = ../../adler32.c; sourceTree = "<group>"; };
+		640751652919452A009F004D /* crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crc32.h; path = ../../crc32.h; sourceTree = "<group>"; };
+		640751662919452A009F004D /* deflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = deflate.h; path = ../../deflate.h; sourceTree = "<group>"; };
+		640751672919452A009F004D /* inftrees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inftrees.c; path = ../../inftrees.c; sourceTree = "<group>"; };
+		640751682919452A009F004D /* zconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zconf.h; path = ../../zconf.h; sourceTree = "<group>"; };
+		640751692919452A009F004D /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zutil.c; path = ../../zutil.c; sourceTree = "<group>"; };
+		6407516A2919452A009F004D /* uncompr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = uncompr.c; path = ../../uncompr.c; sourceTree = "<group>"; };
+		6407516B2919452A009F004D /* inffast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inffast.h; path = ../../inffast.h; sourceTree = "<group>"; };
+		6407516C2919452A009F004D /* gzlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzlib.c; path = ../../gzlib.c; sourceTree = "<group>"; };
+		6407516D2919452B009F004D /* compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = compress.c; path = ../../compress.c; sourceTree = "<group>"; };
+		6407516E2919452B009F004D /* inffast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inffast.c; path = ../../inffast.c; sourceTree = "<group>"; };
+		6407516F2919452B009F004D /* trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trees.h; path = ../../trees.h; sourceTree = "<group>"; };
+		6407517C2919452B009F004D /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crc32.c; path = ../../crc32.c; sourceTree = "<group>"; };
+		6407517D2919452B009F004D /* gzclose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gzclose.c; path = ../../gzclose.c; sourceTree = "<group>"; };
+		6407517E2919452B009F004D /* infback.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = infback.c; path = ../../infback.c; sourceTree = "<group>"; };
+		6407517F2919452B009F004D /* deflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = deflate.c; path = ../../deflate.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 		64075154291944A8009F004D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64075153291944A8009F004D /* libcompression.a */,
+				64075153291944A8009F004D /* libzlib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		64075152291944A8009F004D /* compression */ = {
+		64075152291944A8009F004D /* zlib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64075157291944A8009F004D /* Build configuration list for PBXNativeTarget "compression" */;
+			buildConfigurationList = 64075157291944A8009F004D /* Build configuration list for PBXNativeTarget "zlib" */;
 			buildPhases = (
 				6407514F291944A8009F004D /* Headers */,
 				64075150291944A8009F004D /* Sources */,
@@ -153,9 +153,9 @@
 			);
 			dependencies = (
 			);
-			name = compression;
+			name = zlib;
 			productName = compression;
-			productReference = 64075153291944A8009F004D /* libcompression.a */;
+			productReference = 64075153291944A8009F004D /* libzlib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -173,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6407514E291944A8009F004D /* Build configuration list for PBXProject "compression" */;
+			buildConfigurationList = 6407514E291944A8009F004D /* Build configuration list for PBXProject "zlib" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -186,7 +186,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				64075152291944A8009F004D /* compression */,
+				64075152291944A8009F004D /* zlib */,
 			);
 		};
 /* End PBXProject section */
@@ -357,7 +357,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6407514E291944A8009F004D /* Build configuration list for PBXProject "compression" */ = {
+		6407514E291944A8009F004D /* Build configuration list for PBXProject "zlib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64075155291944A8009F004D /* Debug */,
@@ -366,7 +366,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64075157291944A8009F004D /* Build configuration list for PBXNativeTarget "compression" */ = {
+		64075157291944A8009F004D /* Build configuration list for PBXNativeTarget "zlib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64075158291944A8009F004D /* Debug */,

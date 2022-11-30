@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/charleskerr/Documents/projects/official/UOX3/zlib/ide/xcode/zlib.xcodeproj">
    </FileRef>
 </Workspace>

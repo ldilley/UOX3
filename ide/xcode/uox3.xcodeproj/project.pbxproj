@@ -86,8 +86,8 @@
 		640752982919464A009F004D /* UOXJSPropertyFuncs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640752462919464A009F004D /* UOXJSPropertyFuncs.cpp */; };
 		640752992919464A009F004D /* archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640752472919464A009F004D /* archive.cpp */; };
 		6407529A2919464A009F004D /* cVersionClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6407524A2919464A009F004D /* cVersionClass.cpp */; };
-		640752A229194662009F004D /* libcompression.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 640752A12919465D009F004D /* libcompression.a */; };
-		640752A929194677009F004D /* libjsengine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 640752A829194670009F004D /* libjsengine.a */; };
+		64E0067C2937B2DB00BEBA8F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E0067B2937B2D400BEBA8F /* libz.tbd */; };
+		64E0067E2937B32E00BEBA8F /* libjsengine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E0067D2937B32E00BEBA8F /* libjsengine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +281,8 @@
 		6407524B2919464A009F004D /* gump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gump.h; sourceTree = "<group>"; };
 		6407529C2919465D009F004D /* compression.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = compression.xcodeproj; path = ../compression/ide/compression.xcodeproj; sourceTree = "<group>"; };
 		640752A329194670009F004D /* jsengine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = jsengine.xcodeproj; path = ../jsengine/ide/jsengine.xcodeproj; sourceTree = "<group>"; };
+		64E0067B2937B2D400BEBA8F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		64E0067D2937B32E00BEBA8F /* libjsengine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libjsengine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,8 +290,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				640752A929194677009F004D /* libjsengine.a in Frameworks */,
-				640752A229194662009F004D /* libcompression.a in Frameworks */,
+				64E0067E2937B32E00BEBA8F /* libjsengine.a in Frameworks */,
+				64E0067C2937B2DB00BEBA8F /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,12 +332,14 @@
 				64A753B9291BF0CE00F9A14E /* utility */,
 			);
 			name = source;
-			path = ../source;
+			path = ../../source;
 			sourceTree = "<group>";
 		};
 		6407529B2919465C009F004D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				64E0067D2937B32E00BEBA8F /* libjsengine.a */,
+				64E0067B2937B2D400BEBA8F /* libz.tbd */,
 				640752A329194670009F004D /* jsengine.xcodeproj */,
 				6407529C2919465D009F004D /* compression.xcodeproj */,
 			);
@@ -871,9 +875,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
-					../source,
-					../jsengine,
-					../compression,
+					../../source,
+					../../zlib,
+					../../spidermonkey,
 				);
 				WARNING_CFLAGS = "-Wno-shift-negative-value";
 			};
@@ -887,9 +891,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
-					../source,
-					../jsengine,
-					../compression,
+					../../source,
+					../../zlib,
+					../../spidermonkey,
 				);
 				WARNING_CFLAGS = "-Wno-shift-negative-value";
 			};
