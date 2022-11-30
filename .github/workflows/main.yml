@@ -18,7 +18,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - name: cechckout
+        uses: actions/checkout@v2
       - name: Create build directory
         run: mkdir build | cd build
       - name: CMake build
