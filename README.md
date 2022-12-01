@@ -15,103 +15,69 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 
 ---
 
-# How to compile UOX3...
-# ...under Linux or macOS
-## Step 1: Clone the UOX3 Git Repository
+## Building **UOX3**
+<details> 
+<summary>Setting up the environment</summary>
+**UOX3** requires a C++ compiler supporting the C++17 standards.
 <details>
-  <summary>Using git and Terminal</summary>
+<summary>Obtaining a build environment</summary>
 
-First step, open a new terminal and enter the commands below:
+1) Obtaining the basic build system (C++ and supporting tools)  
 
-1) Install prerequisites:
-
-   * **Linux:** `sudo apt install git` - This will install git if not already installed (Ubuntu/Debian-based Linux variants). If you're using a non-Debian flavour of Linux, use the default package manager that comes with it to install git instead.
-
-   * **macOS:** `xcode-select --install` - This will install git if not already installed, along with required make and gcc tools
-
-   * **FreeBSD:** `pkg install git gmake` - This will install git and gmake if not already installed. Alternatively, build `git` and `gmake` via ports if desired.
-
-2) `git clone https://github.com/UOX3DevTeam/UOX3.git` - This will clone the stable master branch of the UOX3 git repository into a subdirectory of the current directory you're in, named UOX3. The latest verified compatible version of SpiderMonkey (v1.7.0) is also included, as well as a minimal set of files required to compile zlib-1.2.11.
-
-<details>
-  <summary>Checking out Other Branches</summary>
-
-  If you'd rather grab another branch of the git repository, like the **develop** branch where most updates get pushed first before being merged into the master branch, you can use the following command *after* completing the previous step:
-  `git checkout develop`
-
-</details>
-</details>
-
-<details>
-  <summary>(macOS alternative) GitHub Desktop</summary>
-
-  1) Download and install the macOS version of [GitHub Desktop](https://desktop.github.com/).
-  2) Run GitHub Desktop and click **File->Clone Repository** from the menu.
-  3) Click the **URL** tab, enter **https://github.com/UOX3DevTeam/UOX3.git**, then provide a local path for where you want the UOX3 git repository cloned on your drive.
-  4) Hit the **Clone** button!
-
-</details>
-
-## Step 2: Compile UOX3
-<details>
-  <summary>Compiling with CMake and GCC (v9.x and above) or Clang</summary>
-
-You'll need a couple tools before you can compile UOX3 on Linux, like **GNU Make** (*v4.2.1* or higher recommended) and **gcc** (*v9.x* or higher recommended). Install these through your favourite package manager or through your flavour of Linux' variant of the following terminal command (example specific to Debian/Ubuntu Linux flavours):
-
-1) (Linux only) `sudo apt install build-essential`
-2) (Linux only) `sudo apt install cmake`
-3) Navigate to the **UOX3** project folder in your command window.
-4) `cd Build` - Moves to a build directory.
-5) `cmake ../source -DCMAKE_BUILD_TYPE=Release` - Generates make files for building.
-6) `cmake --build . --config Release` - Builds the system.
-7) `cp ./uox3 ../data` - This will copy the uox3 binary to the data directory.
-
-</details>
-
-
-
----
-
-Once done compiling, you will find the compiled uox3 binary in the root UOX3/Build directory. You can copy this binary to the directory you intend to run your UOX3 shard from, along with all the files and folders contained in the UOX3/data subdirectory.
-
-**It is recommended** to run your UOX3 shard from a separate, dedicated directory instead of the data directory in your local UOX3 git repository, to avoid potential git conflicts and accidental overwrites when pulling updates to UOX3 from GitHub in the future.
-
-<details>
-  <summary>Copying Required Files to Dedicated UOX3 Directory</summary>
-
-This is an example of how to copy all required files to a directory called UOX3 in your user account's home directory
-1) *navigate to root UOX3 project directory*
-2) `mkdir ~/UOX3`
-3) `cp Build/uox3 ~/UOX3`
-
-</details>
-
-Once you have all the required files in place, you can follow the regular steps listed under **Installation and Setup > Configuring Your UOX3 Shard** in the UOX3 documentation (see docs folder, or visit https://www.uox3.org/docs/index.html#configureUOX3) to finish your UOX3 setup.
-
----
-
-# ...under Windows
-## Step 1: Clone the UOX3 Git Repository
-1) Download and install [GitHub Desktop](https://desktop.githubc.om). If you already have another tool for git installed, you can use that instead.
-2) Run GitHub Desktop (or your preferred git tool) and click **File->Clone Repository** from the menu.
-3) Click the **URL** tab, enter `https://github.com/UOX3DevTeam/UOX3.git`, then provide a local path for where you want the UOX3 git repository cloned on your drive.
-4) Hit the **Clone** button to clone the stable master branch of the UOX3 git repository to the specified local path, along with the latest verified compatible version of SpiderMonkey (v1.7.0).
-
-## Step 2: Compile UOX3
-
-### Option A) Visual Studio 2022 ([Free Community edition](https://visualstudio.microsoft.com/downloads/))
-<details>
-	<summary>Visual Studio 2022</summary>
+	- **Linux** `sudo apt install build-essential` -- This will install a c++ compiler, make, and other essential build components  
+	- **FreeBSD** FreeBSD comes with a c++ compiler (clang) installed.  
+	- **Windows** [Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/features/cplusplus/)  
+	- **macOS** From the app store application, select XCode, and install. This will install the XCode integrated development environment  
+	or  
+	- **macOS** From a Terminal windows: `xcode-select --install` -- This will install XCode command line tools  
 	
-	*This option will let you use Visual Studio solution/project files to compile both UOX3 and SpiderMonkey with Visual Studio's default VC++ compiler. Note that you can download the [Free Community edition](https://visualstudio.microsoft.com/downloads/) of Visual Studio if you don't have it already. This approach also embeds SpiderMonkey directly inside UOX3 for a slightly larger (~1-2MB) executable, instead of requiring a separate DLL file, and comes with options for compiling either **32-bit** or **64-bit** (default) versions of UOX3.*
+2) Obtaining cmake (Optional, only required if not using an IDE, i.e. command line builds)  
+	- **Linux** `sudo apt install cmake` -- This will install cmake 
+	- **FreeBSD** `sudo pkg install cmake` -- This will install cmake  
+	- **Windows** and **macOS** Download [cmake](https://cmake.org) and enable command line  
 
-***Note:*** You'll need to install **"Desktop development with C++"** via the Visual Studio Installer if you don't have it already, along with the option for this titled **MSVC v141 - VS 2017 C++ x64/x86 build tools (v14.16)**
-#### UOX3 ####
-1) Navigate to the **UOX3\ide\vs2022** directory
-2) Open the **uox3.sln** project in Visual Studio
-3) Select **Build -> Build uox3** to start compiling UOX3. When done, you'll find **UOX3.exe** either in **UOX3\ide\Release\x64**  or in **UOX3\ide\VS2017\Debug\x64** , depending on your choices in the previous step.
+3) Obtaining git  
+	- Graphical  
+		- Download [Github Desktop](https://desktop.github.com)  
 
-### Option B) Visual Studio 2017/2019 ([Free Community edition](https://visualstudio.microsoft.com/downloads/))
+	- Command Line  
+		- **Linux**  `sudo apt install git` -- Installs git  
+		- **FreeBSD** `sudo pkg install git` -- Installs git  
+		- **macOS** Git is part of the XCode command line tool install  
+</details>
+<details>
+<summary>Obtaining the UOX3 source code</summary>
+
+</details>
+</details>
+<details>
+<summary>Creating the executable/binary</summary>
+
+<details>
+<summary>Windows and macOS Integrated Development Environment (Visual Studio/XCode)</summary>
+
+- **Windows**  
+	- Goto the **UOX3\ide\vs2022** directory, and open the uox3.sln file using Visual Studio  
+	- Select the Build Solution option from the menu  
+	- In **UOX3\ide\vs2022\x64\Release** (or **Debug** depending on build type) will be the uox3 executable  
+- **macOS**  
+	- Goto the **UOX3/ide/xcode** directory, and open the uox3.workspace file using XCode  
+	- Select Build from the menu  
+	- In **UOX3/ide/xcode/build/Products/Release** (or **Debug** depending on build type) will be the uox3 binary  </details>
+<details>
+<summary>Command Line/Terminal build (ALL Operating systems)</summary>
+
+1) Open a terminal windows    
+	- **Windows**  From the windows Start menu, open a Developers Command Prompt  
+2) Navigate to your *UOX3* directory where you cloned using git  
+2) Create a build location -- `mkdir build`  
+3) Move to that locations -- `cd build`  
+4) Create the make files   
+	- **WINDOWS** Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles"  `  
+	- **All Other Operation Systems** Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release  `  
+5) Build the system entering: `cmake --build . --config Release`  
+6) The uox3 executable will be in the current (build) directory  
+</details>
 <details>
   <summary>Visual Studio 2017/2019</summary>
 
@@ -152,22 +118,22 @@ Repeat process for both Release and Debug configurations (chosen at top of panel
 
 </details>
 </details>
+</details>
 
-### Option c) command line cmake
+## Data setup 
+**It is recommended** to run your UOX3 shard from a separate, dedicated directory instead of the data directory in your local UOX3 git repository, to avoid potential git conflicts and accidental overwrites when pulling updates to UOX3 from GitHub in the future.
+
 <details>
-  <summary>Developers Terminal CMake</summary>
-1) Goto the Windows Start menu, and open a Developer Command for VS2022 Prompt
-2) Navigate to the **UOX3\Build** directory
-3) enter: `cmake ../source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles"`` - Generates make files for building
-4) enter: `cmake --build . --config Release` - Builds the system 
-5) A **uox3.exe** should now be present in the UOX3/Build folder
+  <summary>Copying Required Files to Dedicated UOX3 Directory</summary>
+
+This is an example of how to copy all required files to a directory called UOX3Server in your user account's home directory
+1) *navigate to root UOX3 project directory*
+2) `mkdir ~/UOX3`
+3) `cp Build/uox3 ~/UOX3`
 
 </details>
 
----
-
-Once done compiling, you can copy your new **uox3.exe** file from the appropriate output folders (depending on which method and configuration you used) to the root folder of your actual UOX3 project. You'll also need to copy the files and folders contained within the **data** subfolder of the UOX3 repository, if you don't already have these.
-
-**It is recommended** to run your UOX3 shard from a separate, dedicated folder instead of the data folder in your local UOX3 git repository, to avoid potential git conflicts and accidental overwrites when pulling updates to UOX3 from GitHub in the future.
 
 Once you have all the required files in place, you can follow the regular steps listed under **Installation and Setup > Configuring Your UOX3 Shard** in the UOX3 documentation (see docs folder, or visit https://www.uox3.org/docs/index.html#configureUOX3) to finish your UOX3 setup!
+
+---
