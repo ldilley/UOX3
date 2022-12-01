@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 echo "Creating Build directory"
 mkdir build 
 cd build
