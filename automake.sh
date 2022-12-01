@@ -13,4 +13,5 @@ fi
 cmake --build . --config Release
 cp uox3 ../
 cd ..
+rm -R build/
 exit $ev
