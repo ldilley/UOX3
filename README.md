@@ -24,7 +24,7 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 <summary>Obtaining a build environment</summary>
 
 1) Obtaining the basic build system (C++ and supporting tools)  
-	- **Windows***  
+	- **Windows**  
 		- [Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/features/cplusplus/) 
 	- **macOS**  
 		- From the app store application, select XCode, and install. This will install the XCode integrated development environment  
