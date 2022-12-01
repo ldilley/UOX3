@@ -84,10 +84,10 @@ If you'd rather grab another branch of the git repository, like the **develop** 
 </details>
 
 ### Creating the executable/binary
-**UOX3** supports building from the command line for most OS's and supported Integrated Development Environments on Windows and macOS
+**UOX3** supports building from the command line for most OS's and supported Integrated Development Environments on Windows and macOS  
+
 <details>
 <summary>Creating the executable/binary</summary>
-
 <details>
 <summary>Windows and macOS Integrated Development Environment (Visual Studio/XCode)</summary>
 
