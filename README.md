@@ -16,27 +16,36 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 ---
 
 ## Building **UOX3**
-<details> 
-<summary>Setting up the environment</summary>
+### Environment setup
+
 **UOX3** requires a C++ compiler supporting the C++17 standards.
+
 <details>
 <summary>Obtaining a build environment</summary>
 
 1) Obtaining the basic build system (C++ and supporting tools)  
-
-	- **Linux** `sudo apt install build-essential` -- This will install a c++ compiler, make, and other essential build components  
-	- **FreeBSD** FreeBSD comes with a c++ compiler (clang) installed.  
-	- **Windows** [Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/features/cplusplus/)  
-	- **macOS** From the app store application, select XCode, and install. This will install the XCode integrated development environment  
-	or  
-	- **macOS** From a Terminal windows: `xcode-select --install` -- This will install XCode command line tools  
+	- **Windows***  
+		- [Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/features/cplusplus/) 
+	- **macOS**  
+		- From the app store application, select XCode, and install. This will install the XCode integrated development environment  
+		or
+		- From a Terminal windows: `xcode-select --install` -- This will install XCode command line tools  
+	- **Linux**  
+		- `sudo apt install build-essential` -- This will install a c++ compiler, make, and other essential build components  
+	- **FreeBSD** 
+		- FreeBSD comes with a c++ compiler (clang) installed.  
 	
 2) Obtaining cmake (Optional, only required if not using an IDE, i.e. command line builds)  
 	- **Linux** `sudo apt install cmake` -- This will install cmake 
 	- **FreeBSD** `sudo pkg install cmake` -- This will install cmake  
 	- **Windows** and **macOS** Download [cmake](https://cmake.org) and enable command line  
+</details>
 
-3) Obtaining git  
+### Obtaining the **UOX3** source code  
+<details>
+<summary>Obtaining Git and checkout out the code</summary>
+
+1) Obtaining git  
 	- Graphical  
 		- Download [Github Desktop](https://desktop.github.com)  
 
@@ -44,12 +53,29 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 		- **Linux**  `sudo apt install git` -- Installs git  
 		- **FreeBSD** `sudo pkg install git` -- Installs git  
 		- **macOS** Git is part of the XCode command line tool install  
-</details>
+2) Checking out the code
+	- Graphical using Github Desktop
+		- Run GitHub Desktop and click **File->Clone Repository** from the menu.  
+		- Click the **URL** tab, enter **https://github.com/UOX3DevTeam/UOX3.git**, then provide a local path for where you want the UOX3 git repository cloned on your drive.  
+		- Click the **Clone** button!
+	- Command line
+		- Obtain a command/terminal window  
+			- **Windows** 
+				- Open a Developers Command Prompt from the Windows Start Menu  
+			- *All other OS* 
+				- Open a terminal window   
+	- Enter the following: `git clone https://github.com/UOX3DevTeam/UOX3.git` - This will clone the stable master branch of the UOX3 git repository into a subdirectory of the current directory you're in, named UOX3. The latest verified compatible version of SpiderMonkey (v1.7.0) is also included, as well as a minimal set of files required to compile zlib-1.2.11.  
 <details>
-<summary>Obtaining the UOX3 source code</summary>
+  <summary>Checking out Other Branches</summary>
+
+  If you'd rather grab another branch of the git repository, like the **develop** branch where most updates get pushed first before being merged into the master branch, you can use the following command *after* completing the previous step:
+  `git checkout develop`
 
 </details>
+
 </details>
+
+### Creating the executable/binary
 <details>
 <summary>Creating the executable/binary</summary>
 
@@ -57,9 +83,25 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 <summary>Windows and macOS Integrated Development Environment (Visual Studio/XCode)</summary>
 
 - **Windows**  
-	- Goto the **UOX3\ide\vs2022** directory, and open the uox3.sln file using Visual Studio  
-	- Select the Build Solution option from the menu  
-	- In **UOX3\ide\vs2022\x64\Release** (or **Debug** depending on build type) will be the uox3 executable  
+	- Visual Studio 2022  
+		- Goto the **UOX3\ide\vs2022** directory, and open the uox3.sln file using Visual Studio  
+		- Select the Build Solution option from the menu  
+		- In **UOX3\ide\vs2022\x64\Release** (or **Debug** depending on build type) will be the uox3 executable  
+	- Visual Studio 2017/2019  
+		This option requires UOX3 and the supporting libraries be built individually
+		- **SpiderMonkey**
+			- Navigate to the **UOX3\spidermonkey\ide\VS2017** folder and open the **js32.vcxproj** in Visual Studio.
+			- Make sure you have **js32** selected in the Solution Explorer, then select **Release** and either **x64** (64-bit) or **Win32** (32-bit) in the Solution Configuration/Platform dropdown menus  
+			- Click **Build > Build js32** from the menu.
+			- Visual Studio will compile SpiderMonkey and create **spidermonkey\Release\x64** (64-bit) or **spidermonkey\Release\x86** (32-bit) folders with the compiled **js32.lib** library file contained within. No further actions are necessary here, so you can close the SpiderMonkey VS Solution.
+		- **zlib**  
+			- Navigate to the **UOX3\zlib\ide\VS2017** folder and open **zlib.sln** in Visual Studio.  
+			- Select **Release** and either **x64** (64-bit) or **Win32** (32-bit) in the Solution Configuration/Platform dropdown menus
+			- Visual Studio will compile SpiderMonkey and create **spidermonkey\Release\x64** (64-bit) or **spidermonkey\Release\x86** (32-bit) folders with the compiled **js32.lib** library file contained within. No further actions are necessary here, so you can close the SpiderMonkey VS Solution.  
+		- **UOX3**
+			- Open **UOX3_Official.sln** from the **UOX3\ide\vs2017** folder.  
+			- Make sure you have **UOX3_Official** selected in the Solution Explorer, then select either **Release** or **Debug**, and either **x64** (64-bit) or **Win32** (32-bit) in the *Solution Configuration/Platform dropdown menus*, or via **Build -> Configuration Manager**.  
+			- Select **Build -> Build UOX3_Official** to start compiling UOX3. When done, you'll find **UOX3.exe** either in **UOX3\ide\Release\x64** (or **\x86**) or in **UOX3\ide\VS2017\Debug\x64** (or **\86**), depending on your choices in the previous step.  	
 - **macOS**  
 	- Goto the **UOX3/ide/xcode** directory, and open the uox3.workspace file using XCode  
 	- Select Build from the menu  
@@ -73,50 +115,14 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 2) Create a build location -- `mkdir build`  
 3) Move to that locations -- `cd build`  
 4) Create the make files   
-	- **WINDOWS** Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles"  `  
-	- **All Other Operation Systems** Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release  `  
+	- **WINDOWS**  
+		- Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles"  `  
+	- **macOS**   
+		- Enter: `cmake ..\source -DCMAKE_BUILD_TYPE=Release -G"Unix Makefiles"  ` 
+	- **All Other Operation Systems**  
+		- Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release  `  
 5) Build the system entering: `cmake --build . --config Release`  
 6) The uox3 executable will be in the current (build) directory  
-</details>
-<details>
-  <summary>Visual Studio 2017/2019</summary>
-
-*This option will let you use Visual Studio solution/project files to compile both UOX3 and SpiderMonkey with Visual Studio's default VC++ compiler. Note that you can download the [Free Community edition](https://visualstudio.microsoft.com/downloads/) of Visual Studio if you don't have it already. This approach also embeds SpiderMonkey directly inside UOX3 for a slightly larger (~1-2MB) executable, instead of requiring a separate DLL file, and comes with options for compiling either **32-bit** or **64-bit** (default) versions of UOX3.*
-
-***Note:*** You'll need to install **"Desktop development with C++"** via the Visual Studio Installer if you don't have it already, along with the option for this titled **MSVC v141 - VS 2017 C++ x64/x86 build tools (v14.16)**
-
-#### SpiderMonkey ####
-1) Navigate to the **UOX3\spidermonkey\ide\VS2017** folder and open the project folder of your choice*SpiderMonkey*.sln** in Visual Studio.
-2) Make sure you have **js32** selected in the Solution Explorer, then select **Release** and either **x64** (64-bit) or **Win32** (32-bit) in the Solution Configuration/Platform dropdown menus
-3) Click **Build > Build js32** from the menu.
-4) Visual Studio will compile SpiderMonkey and create **spidermonkey\Release\x64** (64-bit) or **spidermonkey\Release\x86** (32-bit) folders with the compiled **js32.lib** library file contained within. No further actions are necessary here, so you can close the SpiderMonkey VS Solution.
-
-### zlib ###
-1) Navigate to the **UOX3\zlib\ide\VS2017** folder and open **zlib.sln** in Visual Studio.
-2) Select **Release** and either **x64** (64-bit) or **Win32** (32-bit) in the Solution Configuration/Platform dropdown menus
-3) Click **Build > Build zlib-static** from the menu.
-4) Visual Studio will compile zlib and create **zlib\x64\Release** (64-bit) or **zlib\x86\Release** (32-bit) folders with the compiled **zlib-static.lib** library file contained within. No further actions are necessary here, so you can close the zlib VS Solution.
-
-#### UOX3 ####
-1) Open **UOX3_Official.sln** from the **UOX3\ide\vs2017** folder.
-2) Make sure you have **UOX3_Official** selected in the Solution Explorer, then select either **Release** or **Debug**, and either **x64** (64-bit) or **Win32** (32-bit) in the *Solution Configuration/Platform dropdown menus*, or via **Build -> Configuration Manager**.
-3) Select **Build -> Build UOX3_Official** to start compiling UOX3. When done, you'll find **UOX3.exe** either in **UOX3\ide\Release\x64** (or **\x86**) or in **UOX3\ide\VS2017\Debug\x64** (or **\86**), depending on your choices in the previous step.
-
-<details>
-  <summary>Adding SpiderMonkey/zlib references in Configuration Manager</summary>
-
-If VS give you link errors when attempting to build UOX3, references to SpiderMonkey or zlib might have gone missing! Try the following steps to add them back.
-
-1) Right click on **UOX3_Official** in the Solution Explorer, and select Properties.
-2) With the desired configuration (ex: Release, x64) selected at the top of the panel, add references to SpiderMonkey and zlib in these sections:
-  * *VC++ Directories >* **Include Directories** (add path to SpiderMonkey and zlib root folders)
-  * *VC++ Directories >* **Library Directories** (add path to SpiderMonkey **Release\x64** or **Release\x86** folder, as well as zlib **\x64\Release** or **\x86\Release** folder, depending on desired configuration)
-  * *VC++ Directories >* **Source Directories** (add path to SpiderMonkey and zlib root folders)
-  * *Linker >* **Additional Library Dependencies** (add path to SpiderMonkey **Release\x64** or **Release\x86** folder, as well as zlib **\x64\Release** or **\x86\Release** folder, depending on desired configuration)
-Press apply!
-Repeat process for both Release and Debug configurations (chosen at top of panel), then retry the UOX3 build process!
-
-</details>
 </details>
 </details>
 
