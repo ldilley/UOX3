@@ -8,7 +8,7 @@ then
         # Mac OS X
         cmake ../source -DCMAKE_BUILD_TYPE=Release -G"Unix Makefiles"
 else 
-cmake ../source -DCMAKE_BUILD_TYPE=Releaseelif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]
+cmake ../source -DCMAKE_BUILD_TYPE=Release
 fi
 cmake --build . --config Release
 cp uox3 ../
