@@ -17,12 +17,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: setupt msvc console
-        uses: ilammy/msvc-dev-cmd@v1
+        uses: ilammy/msvc-dev-cmd@v2
         with:
           arch: x64
       - name: CMake build
-         run: |
-            mkdir Build
-            cd Build
+        run: |
+             mkdir Build
+             cd Build
             cmake ../source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles" 
             cmake --build . --config Release
