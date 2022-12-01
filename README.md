@@ -51,6 +51,7 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 <summary>Obtaining Git and checkout out the code</summary>
 
 1) Obtaining git  
+	For general reference refer to [Cmake Install](https://cmake.org/install/)  
 	- Graphical  
 		- Download [Github Desktop](https://desktop.github.com)  
 
@@ -135,6 +136,9 @@ If you'd rather grab another branch of the git repository, like the **develop** 
 		- Enter:  `cmake ../source -DCMAKE_BUILD_TYPE=Release  `  
 5) Build the system entering: `cmake --build . --config Release`  
 6) The uox3 executable will be in the current (build) directory  
+
+An alternative for **UNIX** like systems is to execute `.\automake.sh` in the **UOX3** directory. This will generate a **uox3** binary in that directory.  
+
 </details>
 </details>
 
