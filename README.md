@@ -61,10 +61,10 @@ You'll need a couple tools before you can compile UOX3 on Linux, like **GNU Make
 1) (Linux only) `sudo apt install build-essential`
 2) (Linux only) `sudo apt install cmake`
 3) Navigate to the **UOX3** project folder in your command window.
-4)'cd Build' - Moves to a build directory
-5)'cmake ../source -DCMAKE_BUILD_TYPE=Release' - Generates make files for building
-6)'cmake --build . --config Release' - Builds the system 
-7)'cp ./uox3 ../data' - This will copy the uox3 binary to the data directory
+4)'cd Build' - Moves to a build directory.
+5)'cmake ../source -DCMAKE_BUILD_TYPE=Release' - Generates make files for building.
+6)'cmake --build . --config Release' - Builds the system.
+7)'cp ./uox3 ../data' - This will copy the uox3 binary to the data directory.
 
 </details>
 
