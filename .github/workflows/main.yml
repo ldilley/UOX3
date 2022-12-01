@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: cechckout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       - name: CMake build
         run: |
             cd Build
