@@ -19,9 +19,9 @@ jobs:
 
     steps:
       - name: cechckout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: CMake build
-        run: 
-            cd Build
-            cmake ../source -DCMAKE_BUILD_TYPE=Release  
-            cmake --build . --config Release
+        run: |
+             cd Build
+             cmake ../source -DCMAKE_BUILD_TYPE=Release  
+             cmake --build . --config Release
