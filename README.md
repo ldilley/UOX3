@@ -63,10 +63,10 @@ You'll need a couple tools before you can compile UOX3 on Linux, like **GNU Make
 
 
 Once these are in place, navigate to the **UOX3** project folder in your terminal and execute the following command from the project's root directory:
- 'cd Build' - Moves to a build directory
- 'cmake ../source -DCMAKE_BUILD_TYPE=Release' - Generates make files for building
- 'cmake --build . --config Release' - Builds the system 
- 'cp ./uox3 ../data' - This will copy the uox3 binary to the data directory
+ 1)'cd Build' - Moves to a build directory
+ 2)'cmake ../source -DCMAKE_BUILD_TYPE=Release' - Generates make files for building
+ 3)'cmake --build . --config Release' - Builds the system 
+ 4)'cp ./uox3 ../data' - This will copy the uox3 binary to the data directory
 </details>
 
 
@@ -159,10 +159,9 @@ Repeat process for both Release and Debug configurations (chosen at top of panel
   <summary>Developers Terminal CMake</summary>
 1) Goto the Windows Start menu, and open a Developer Command for VS2022 Prompt
 2) Navigate to the **UOX3\Build** directory
-3) enter the following commands
- 'cmake ../source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles"' - Generates make files for building
- 'cmake --build . --config Release' - Builds the system 
-4) A **uox3.exe** should now be present in the UOX3/Build folder
+3) enter: 'cmake ../source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles"' - Generates make files for building
+4) enter: 'cmake --build . --config Release' - Builds the system 
+5) A **uox3.exe** should now be present in the UOX3/Build folder
 
 </details>
 
