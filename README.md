@@ -55,9 +55,12 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 		- Download [Github Desktop](https://desktop.github.com)  
 
 	- Command Line  
-		- **Linux**  `sudo apt install git` -- Installs git  
-		- **FreeBSD** `sudo pkg install git` -- Installs git  
-		- **macOS** Git is part of the XCode command line tool install  
+		- **Linux**  
+			- Enter at a command prompt: `sudo apt install git` -- Installs git  
+		- **FreeBSD** 
+			- Enter at a command prompt: `sudo pkg install git` -- Installs git  
+		- **macOS** 
+			- Git is part of the XCode command line tool install  
 2) Checking out the code
 	- Graphical using Github Desktop
 		- Run GitHub Desktop and click **File->Clone Repository** from the menu.  
@@ -67,13 +70,13 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 		- Obtain a command/terminal window  
 			- **Windows** 
 				- Open a Developers Command Prompt from the Windows Start Menu  
-			- *All other OS* 
+			- **All other OS**
 				- Open a terminal window   
 	- Enter the following: `git clone https://github.com/UOX3DevTeam/UOX3.git` - This will clone the stable master branch of the UOX3 git repository into a subdirectory of the current directory you're in, named UOX3. The latest verified compatible version of SpiderMonkey (v1.7.0) is also included, as well as a minimal set of files required to compile zlib-1.2.11.  
 <details>
   <summary>Checking out Other Branches</summary>
 
-  If you'd rather grab another branch of the git repository, like the **develop** branch where most updates get pushed first before being merged into the master branch, you can use the following command *after* completing the previous step:
+If you'd rather grab another branch of the git repository, like the **develop** branch where most updates get pushed first before being merged into the master branch, you can use the following command *after* completing the previous step:
   `git checkout develop`
 
 </details>
@@ -81,6 +84,7 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 </details>
 
 ### Creating the executable/binary
+**UOX3** supports building from the command line for most OS's and supported Integrated Development Environments on Windows and macOS
 <details>
 <summary>Creating the executable/binary</summary>
 
