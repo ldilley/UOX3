@@ -118,11 +118,14 @@ If you'd rather grab another branch of the git repository, like the **develop** 
 <details>
 <summary>Command Line/Terminal build (ALL Operating systems)</summary>
 
-1) Open a terminal windows    
-	- **Windows**  From the windows Start menu, open a Developers Command Prompt  
+1) Open a terminal window    
+	- **Windows** users note:  
+		- From the windows Start menu, open a Developers Command Prompt  
 2) Navigate to your *UOX3* directory where you cloned using git  
-2) Create a build location -- `mkdir build`  
-3) Move to that locations -- `cd build`  
+2) Create a build location 
+	- Enter: `mkdir build`  
+3) Move to that locations
+	- Enter: `cd build`  
 4) Create the make files   
 	- **WINDOWS**  
 		- Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles"`    
