@@ -28,7 +28,9 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 		- [Visual Studio Community Edition](https://visualstudio.microsoft.com/vs/features/cplusplus/) 
 	- **macOS**  
 		- From the app store application, select XCode, and install. This will install the XCode integrated development environment  
+		
 		or
+		
 		- From a Terminal windows: `xcode-select --install` -- This will install XCode command line tools  
 	- **Linux**  
 		- `sudo apt install build-essential` -- This will install a c++ compiler, make, and other essential build components  
@@ -36,9 +38,12 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 		- FreeBSD comes with a c++ compiler (clang) installed.  
 	
 2) Obtaining cmake (Optional, only required if not using an IDE, i.e. command line builds)  
-	- **Linux** `sudo apt install cmake` -- This will install cmake 
-	- **FreeBSD** `sudo pkg install cmake` -- This will install cmake  
-	- **Windows** and **macOS** Download [cmake](https://cmake.org) and enable command line  
+	- **Linux** 
+		-  Enter from a command prompt: `sudo apt install cmake` -- This will install cmake 
+	- **FreeBSD** 
+		- Enter from a commadn prompt: `sudo pkg install cmake` -- This will install cmake  
+	- **Windows** and **macOS** 
+		- Download [cmake](https://cmake.org) and enable command line  
 </details>
 
 ### Obtaining the **UOX3** source code  
