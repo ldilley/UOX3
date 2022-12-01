@@ -120,6 +120,10 @@ If you'd rather grab another branch of the git repository, like the **develop** 
 <details>
 <summary>Command Line/Terminal build (ALL Operating systems)</summary>
 
+An alternative to the steps that follow for **UNIX** like systems is to execute `.\automake.sh` in the **UOX3** directory from a command promt. This will generate a **uox3** binary in that directory.   
+
+Otherwise non *UNIX like* systems or for step by step instructions, perform the following:  
+
 1) Open a terminal window    
 	- **Windows** users note:  
 		- From the windows Start menu, open a Developers Command Prompt  
@@ -138,7 +142,6 @@ If you'd rather grab another branch of the git repository, like the **develop** 
 5) Build the system entering: `cmake --build . --config Release`  
 6) The uox3 executable will be in the current (build) directory  
 
-An alternative for **UNIX** like systems is to execute `.\automake.sh` in the **UOX3** directory. This will generate a **uox3** binary in that directory.  
 
 </details>
 </details>
