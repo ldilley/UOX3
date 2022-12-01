@@ -21,7 +21,7 @@ jobs:
         with:
           arch: x64
       - name: CMake build
-         run: |
+         run: 
             cd Build
             cmake ../source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles" 
             cmake --build . --config Release
