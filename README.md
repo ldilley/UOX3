@@ -98,7 +98,7 @@ If you'd rather grab another branch of the git repository, like the **develop** 
 		- In **UOX3\ide\vs2022\x64\Release** (or **Debug** depending on build type) will be the uox3 executable  
 	- Visual Studio 2017/2019  
 		This option requires UOX3 and the supporting libraries be built individually
-		- **SpiderMonkey**
+		- **SpiderMonkey**  
 			- Navigate to the **UOX3\spidermonkey\ide\VS2017** folder and open the **js32.vcxproj** in Visual Studio.
 			- Make sure you have **js32** selected in the Solution Explorer, then select **Release** and either **x64** (64-bit) or **Win32** (32-bit) in the Solution Configuration/Platform dropdown menus  
 			- Click **Build > Build js32** from the menu.
@@ -107,7 +107,7 @@ If you'd rather grab another branch of the git repository, like the **develop** 
 			- Navigate to the **UOX3\zlib\ide\VS2017** folder and open **zlib.sln** in Visual Studio.  
 			- Select **Release** and either **x64** (64-bit) or **Win32** (32-bit) in the Solution Configuration/Platform dropdown menus
 			- Visual Studio will compile SpiderMonkey and create **spidermonkey\Release\x64** (64-bit) or **spidermonkey\Release\x86** (32-bit) folders with the compiled **js32.lib** library file contained within. No further actions are necessary here, so you can close the SpiderMonkey VS Solution.  
-		- **UOX3**
+		- **UOX3**  
 			- Open **UOX3_Official.sln** from the **UOX3\ide\vs2017** folder.  
 			- Make sure you have **UOX3_Official** selected in the Solution Explorer, then select either **Release** or **Debug**, and either **x64** (64-bit) or **Win32** (32-bit) in the *Solution Configuration/Platform dropdown menus*, or via **Build -> Configuration Manager**.  
 			- Select **Build -> Build UOX3_Official** to start compiling UOX3. When done, you'll find **UOX3.exe** either in **UOX3\ide\Release\x64** (or **\x86**) or in **UOX3\ide\VS2017\Debug\x64** (or **\86**), depending on your choices in the previous step.  	
@@ -125,11 +125,11 @@ If you'd rather grab another branch of the git repository, like the **develop** 
 3) Move to that locations -- `cd build`  
 4) Create the make files   
 	- **WINDOWS**  
-		- Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles"  `  
+		- Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release -G"NMake Makefiles"`    
 	- **macOS**   
-		- Enter: `cmake ..\source -DCMAKE_BUILD_TYPE=Release -G"Unix Makefiles"  ` 
-	- **All Other Operation Systems**  
-		- Enter:  `cmake ..\source -DCMAKE_BUILD_TYPE=Release  `  
+		- Enter: `cmake ../source -DCMAKE_BUILD_TYPE=Release -G"Unix Makefiles"`  
+	- **All Other Operation Systems**    
+		- Enter:  `cmake ../source -DCMAKE_BUILD_TYPE=Release  `  
 5) Build the system entering: `cmake --build . --config Release`  
 6) The uox3 executable will be in the current (build) directory  
 </details>
