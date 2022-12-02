@@ -43,7 +43,9 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 		-  Enter from a command prompt: `sudo apt install cmake` -- This will install cmake 
 	- **FreeBSD** 
 		- Enter from a commadn prompt: `sudo pkg install cmake` -- This will install cmake  
-	- **Windows** and **macOS** 
+	- **Windows**  
+		- Cmake is part of the Visual Studio Deelopment Evnroment  
+	- **macOS**  
 		- Download [cmake](https://cmake.org) and enable command line  
 </details>
 
@@ -63,6 +65,8 @@ Join the [UOX3 Discord](https://discord.gg/uBAXxhF) for support and/or a quick c
 			- Enter at a command prompt: `sudo pkg install git` -- Installs git  
 		- **macOS** 
 			- Git is part of the XCode command line tool install  
+		- **Windows**  
+			- Git is part of the Visual Studio Development Environment 
 2) Checking out the code
 	- Graphical using Github Desktop
 		- Run GitHub Desktop and click **File->Clone Repository** from the menu.  
